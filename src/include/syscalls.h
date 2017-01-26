@@ -14,6 +14,8 @@
 #define MAP_FAILED  ((void *) -1)
 extern "C" void* mmap(void* addr, size_t len, int prot, int flags, int filedes, off_t off);
 extern "C" int munmap(void* addr, size_t len);
+extern “C” int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
+extern “C” int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
 
 extern "C" pid_t getcid();
 
