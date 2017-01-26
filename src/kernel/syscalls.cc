@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -121,7 +121,15 @@ extern "C" off_t lseek(int fildes, off_t offset, int whence) {
 extern "C" long get_core_count(){
 	return Machine::getProcessorCount();
 }
+/*I have added our system calls here*/
+extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) {
+  return 0;//modify this to something else?
+}
 
+extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
+  return 0;//modify this to something else?
+}
+/*end of added by Dylan*/
 extern "C" pid_t getpid() {
   return CurrProcess().getID();
 }
@@ -267,7 +275,10 @@ static const syscall_t syscalls[] = {
   syscall_t(semP),
   syscall_t(semV),
   syscall_t(privilege),
-  syscall_t(_init_sig_handler)
+  syscall_t(_init_sig_handler),
+  syscall_t(sched_getaffinity),
+  syscall_t(sched_setaffinity)
+
 };
 
 static_assert(sizeof(syscalls)/sizeof(syscall_t) == SyscallNum::max, "syscall list error");
