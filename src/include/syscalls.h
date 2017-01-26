@@ -41,6 +41,8 @@ enum : mword {
   pthread_join,
   pthread_kill,
   pthread_self,
+  sched_getaffinityenum,
+  sched_setaffinityenum,
   semCreate,
   semDestroy,
   semP,
