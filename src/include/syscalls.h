@@ -49,8 +49,8 @@ enum : mword {
   semV,
   privilege,
   _init_sig_handler,
-  sched_getaffinityenum,
-  sched_setaffinityenum,
+  sched_getaffinity,
+  sched_setaffinity,
   max
 };
 
