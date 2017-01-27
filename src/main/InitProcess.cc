@@ -18,7 +18,7 @@
 
 int InitProcess() {
   Process* p0 = knew<Process>();
-  p0->exec("systest");
+  p0->exec("schedAffinityTest");
 #if !TESTING_KEYCODE_LOOP
   Process* p1 = knew<Process>();
   p1->exec("kbloop");
