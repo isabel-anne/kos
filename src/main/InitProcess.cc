@@ -19,6 +19,7 @@
 int InitProcess() {
   Process* p0 = knew<Process>();
   p0->exec("schedAffinityTest");
+/*
 #if !TESTING_KEYCODE_LOOP
   Process* p1 = knew<Process>();
   p1->exec("kbloop");
@@ -26,6 +27,6 @@ int InitProcess() {
   Process* p2 = knew<Process>();
   p2->exec("threadtest");
   Process* p3 = knew<Process>();
-  p3->exec("manythread");
+  p3->exec("manythread");*/
   return 0;
 }
