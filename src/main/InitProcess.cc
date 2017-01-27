@@ -1,9 +1,5 @@
 /******************************************************************************
-<<<<<<< Updated upstream
-    Copyright © 2012-2015 Martin Karsten
-=======
     Copyright � 2012-2015 Martin Karsten
->>>>>>> Stashed changes
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -30,6 +26,6 @@ int InitProcess() {
   Process* p2 = knew<Process>();
   p2->exec("threadtest");
   Process* p3 = knew<Process>();
-  p3->exec("schedAffinityTest");
+  p3->exec("manythread");
   return 0;
 }
