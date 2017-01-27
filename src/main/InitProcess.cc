@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright Â© 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 int InitProcess() {
   Process* p0 = knew<Process>();
   p0->exec("systest");
+   /*
 #if !TESTING_KEYCODE_LOOP
   Process* p1 = knew<Process>();
   p1->exec("kbloop");
@@ -27,5 +28,6 @@ int InitProcess() {
   p2->exec("threadtest");
   Process* p3 = knew<Process>();
   p3->exec("manythread");
+  */
   return 0;
 }
