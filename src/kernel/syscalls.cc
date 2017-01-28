@@ -123,7 +123,13 @@ extern "C" long get_core_count(){
 }
 /*I have added our system calls here*/
 extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) {
-  return 0;//modify this to something else?
+  if(pid != 0){
+    return EPERM;
+  }
+  if(mask >= 0x10){
+    return EINVAL;
+  }
+  return -1;
 }
 
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
