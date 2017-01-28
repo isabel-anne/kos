@@ -126,7 +126,9 @@ extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) 
   if(pid != 0){
     return EPERM;
   }
-  if(mask >= 0x10){
+
+  auto b = reinterpret_cast<std::uintptr_t>(mask);
+  if(b >= 16){
     return EINVAL;
   }
   return -1;
