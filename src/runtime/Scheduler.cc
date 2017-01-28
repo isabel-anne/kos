@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -122,18 +122,36 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
   //Scheduler* target =  Runtime::getCurrThread()->getAffinity();
   Scheduler *target = nullptr;
   mword affinityMask = Runtime::getCurrThread()->getAffinityMask();
-
+  int core1 = 10000000;
+  int core2 = 10000000;
+  int core3 = 10000000;
+  int core4 = 10000000;
   if( affinityMask == 0 ) {
 	  /* use Martin's code when no affinity is set via bit mask */
 	  target =  Runtime::getCurrThread()->getAffinity();
    }  else {
-	  /* CPSC457l: Add code here to scan the affinity mask
-      * and select the processor with the smallest ready count.
-      * Set the scheduler of the selected processor as target
-      * switchThread(target) migrates the current thread to
-      * specified target's ready queue
-      */
-
+        if(affinityMask & 1){
+          core1 = Machine:getScheduler(1)->readyCount;
+        }
+        if(affinityMask & 2){
+          core2 = Machine:getScheduler(2)->readyCount;
+        }
+        if(affinityMask & 4){
+          core3 = Machine:getScheduler(3)->readyCount;
+        }
+        if(affinityMask & 8){
+          core4 = Machine:getScheduler(4)->readyCount;
+        }
+        if((core1 != 10000000) && (core1 <= core2) && (core1 <= core3) && (core1 <= core4)){
+          target =  1;
+        } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
+          target =  2;
+        } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
+          target =  4;
+        } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
+          target =  8;
+        }
+        switchThread(target);
    }
 
 #if TESTING_ALWAYS_MIGRATE

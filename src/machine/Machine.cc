@@ -443,6 +443,7 @@ void Machine::setAffinity(Thread& t, mword idx) {
   KASSERT1(idx < processorCount, idx);
   t.setAffinity(processorTable[idx].scheduler);
 }
+
 Scheduler* Machine::getScheduler( mword idx ){
   KASSERT1(idx < processorCount, idx);
   return processorTable[idx].scheduler;
