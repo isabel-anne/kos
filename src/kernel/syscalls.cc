@@ -127,8 +127,8 @@ extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) 
 }
 
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
-  if(pid != EPERM){
-    return -1;
+  if(pid != 0){
+    return EPERM;
   }
   return LocalProcessor::getCurrThread()->getAffinityMask();
   //processorTable[0].scheduler // scheduler object of core 0
