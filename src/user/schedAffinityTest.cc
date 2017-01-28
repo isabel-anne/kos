@@ -57,7 +57,7 @@ int main() {
    if( err == EPERM || err == EINVAL ){
       cout << "sched_setaffinity unsuccessful" << endl;
    } else {
-      cout << "sched_setaffinity successful" << endl;
+      //cout << "sched_setaffinity successful" << endl;
 	   whereAmI();
    }
 
@@ -69,7 +69,7 @@ int main() {
    if( err == EPERM || err == EINVAL ){
       cout << "sched_setaffinity unsuccessful"<< endl;
    }else {
-      cout << "sched_setaffinity successful" << endl;
+      //cout << "sched_setaffinity successful" << endl;
    	whereAmI();
    }
 

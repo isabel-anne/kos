@@ -1,5 +1,9 @@
 /******************************************************************************
+<<<<<<< HEAD
     Copyright � 2012-2015 Martin Karsten
+=======
+    Copyright © 2012-2015 Martin Karsten
+>>>>>>> origin
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,8 +22,13 @@
 
 int InitProcess() {
   Process* p0 = knew<Process>();
+<<<<<<< HEAD
   p0->exec("schedAffinityTest");
 /*
+=======
+  p0->exec("systest");
+   /*
+>>>>>>> origin
 #if !TESTING_KEYCODE_LOOP
   Process* p1 = knew<Process>();
   p1->exec("kbloop");
@@ -27,6 +36,11 @@ int InitProcess() {
   Process* p2 = knew<Process>();
   p2->exec("threadtest");
   Process* p3 = knew<Process>();
+<<<<<<< HEAD
   p3->exec("manythread");*/
+=======
+  p3->exec("manythread");
+  */
+>>>>>>> origin
   return 0;
 }
