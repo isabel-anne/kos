@@ -131,7 +131,7 @@ extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) 
   if(b >= 16){
     return EINVAL;
   }
-  Runtime::getCurrThread()->setAffinityMask(mword(mask));
+  LocalProcessor::getCurrThread()->setAffinityMask(*mask);
   LocalProcessor::getScheduler()->yield();
 
   return 0;
