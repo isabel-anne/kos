@@ -131,25 +131,25 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
 	  target =  Runtime::getCurrThread()->getAffinity();
    }  else {
         if(affinityMask & 1){
-          core1 = Machine:getScheduler(1)->readyCount;
+          core1 = Machine::getScheduler(1)->readyCount;
         }
         if(affinityMask & 2){
-          core2 = Machine:getScheduler(2)->readyCount;
+          core2 = Machine::getScheduler(2)->readyCount;
         }
         if(affinityMask & 4){
-          core3 = Machine:getScheduler(3)->readyCount;
+          core3 = Machine::getScheduler(3)->readyCount;
         }
         if(affinityMask & 8){
-          core4 = Machine:getScheduler(4)->readyCount;
+          core4 = Machine::getScheduler(4)->readyCount;
         }
         if((core1 != 10000000) && (core1 <= core2) && (core1 <= core3) && (core1 <= core4)){
-          target =  1;
+          *target =  1;
         } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
-          target =  2;
+          *target =  2;
         } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
-          target =  4;
+          *target =  4;
         } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
-          target =  8;
+          *target =  8;
         }
         switchThread(target);
    }
