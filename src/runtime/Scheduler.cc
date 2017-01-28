@@ -143,13 +143,13 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
           core4 = Machine::getScheduler(4)->readyCount;
         }
         if((core1 != 10000000) && (core1 <= core2) && (core1 <= core3) && (core1 <= core4)){
-          *target =  1;
+          *target =  processorTable[0].scheduler;
         } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
-          *target =  2;
+          *target =  processorTable[1].scheduler;
         } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
-          *target =  4;
+          *target =  processorTable[2].scheduler;
         } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
-          *target =  8;
+          *target =  processorTable[3].scheduler;
         }
         switchThread(target);
    }
