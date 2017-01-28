@@ -147,7 +147,7 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
         } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
           target =  Machine::getScheduler(1);
         } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
-          target = Machine::getScheduler(2);
+          target =  Machine::getScheduler(2);
         } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
           target =  Machine::getScheduler(3);
         }
