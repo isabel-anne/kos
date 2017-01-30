@@ -1,0 +1,9 @@
+pthread.o: pthread.cc /home/ugc/ianiedli/kos/src/ulib/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/pthread.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h
+libKOS.o: libKOS.cc /home/ugc/ianiedli/kos/src/ulib/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h \
+ /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h

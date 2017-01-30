@@ -1,0 +1,22 @@
+schedAffinityTest.o: schedAffinityTest.cc \
+ /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+ /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+threadtest.o: threadtest.cc \
+ /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+ /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+systest.o: systest.cc /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/user/../include/kostypes.h
+manythread.o: manythread.cc \
+ /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+ /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+ /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+ /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+kbloop.o: kbloop.cc /home/ugc/ianiedli/kos/src/user/../testoptions.h

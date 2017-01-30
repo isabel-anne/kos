@@ -122,36 +122,41 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
   //Scheduler* target =  Runtime::getCurrThread()->getAffinity();
   Scheduler *target = nullptr;
   mword affinityMask = Runtime::getCurrThread()->getAffinityMask();
-  int core1 = 10000000;
-  int core2 = 10000000;
-  int core3 = 10000000;
-  int core4 = 10000000;
+  mword core1 = 10000000;
+  mword core2 = 10000000;
+  mword core3 = 10000000;
+  mword core4 = 10000000;
   if( affinityMask == 0 ) {
 	  /* use Martin's code when no affinity is set via bit mask */
 	  target =  Runtime::getCurrThread()->getAffinity();
    }  else {
         if(affinityMask & 1){
-          core1 = Machine::getScheduler(1)->readyCount;
+          core1 = LocalProcessor::getScheduler()->readyCount;
+  //        core1 = Machine::getScheduler(1)->readyCount;
         }
         if(affinityMask & 2){
-          core2 = Machine::getScheduler(2)->readyCount;
+          core2 = LocalProcessor::getScheduler()->readyCount;
+          // core2 = Machine::getScheduler()->readyCount;
         }
         if(affinityMask & 4){
-          core3 = Machine::getScheduler(3)->readyCount;
+          core3 = LocalProcessor::getScheduler()->readyCount;
+        //  core3 = Machine::getScheduler()->readyCount;
         }
         if(affinityMask & 8){
-          core4 = Machine::getScheduler(4)->readyCount;
+          core4 = LocalProcessor::getScheduler()->readyCount;
+//          core4 = Machine::getScheduler(4->readyCount;
         }
         if((core1 != 10000000) && (core1 <= core2) && (core1 <= core3) && (core1 <= core4)){
-          target =  Machine::getScheduler(0);
+          target =  Machine::getScheduler(core1);
+//          target =  Machine::getScheduler(0);
         } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
-          target =  Machine::getScheduler(1);
+          target =  Machine::getScheduler(core2);
         } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
-          target =  Machine::getScheduler(2);
+          target =  Machine::getScheduler(core3);
         } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
-          target =  Machine::getScheduler(3);
+          target =  Machine::getScheduler(core4);
         }
-        switchThread(target);
+    //    switchThread(target);
    }
 
 #if TESTING_ALWAYS_MIGRATE

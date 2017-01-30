@@ -80,15 +80,19 @@ extern "C" pid_t getpid() {
   return syscallStub(SyscallNum::getpid);
 }
 
-/*added by Dylan*/
+/*added by Dylan & Isabel*/
 extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) {
-  return syscallStub(SyscallNum::sched_setaffinity, pid, cpusetsize, *mask);//modify this to something else?
+  //return
+  syscallStub(SyscallNum::sched_setaffinityEnum, pid, cpusetsize, mword(mask));
+  //syscallStub(SyscallNum::sched_setaffinityEnum, pid, cpusetsize, mword(mask));
 }
 
 extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
-  return syscallStub(SyscallNum::sched_getaffinity, pid, cpusetsize, *mask);//modify this to something else?
+  //
+ syscallStub(SyscallNum::sched_getaffinityEnum, pid, cpusetsize, mword(mask));
+  //syscallStub(SyscallNum::sched_getaffinityEnum, pid, cpusetsize, mword(mask));
 }
-/*end of added by Dylan*/
+/*end of added by Dylan & Isabel*/
 
 extern "C" pid_t getcid() {
   return syscallStub(SyscallNum::getcid);

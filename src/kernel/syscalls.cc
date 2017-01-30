@@ -127,8 +127,13 @@ extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) 
     return EPERM;
   }
 
-  auto b = reinterpret_cast<std::uintptr_t>(mask);
-  if(b >= 16){
+  // auto b = reinterpret_cast<std::uintptr_t>(mask);
+  // if(b >= 16){
+  //   return EINVAL;
+  // }
+
+  if( (*mask != 1) && (*mask != 2) && (*mask != 4) && (*mask != 8))
+  {
     return EINVAL;
   }
   LocalProcessor::getCurrThread()->setAffinityMask(*mask);
@@ -141,10 +146,12 @@ extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
   if(pid != 0){
     return EPERM;
   }
-  return LocalProcessor::getCurrThread()->getAffinityMask();
+  *mask = LocalProcessor::getCurrThread()->getAffinityMask();
+  return *mask;
+  // return LocalProcessor::getCurrThread()->getAffinityMask();
   //processorTable[0].scheduler // scheduler object of core 0
 }
-/*end of added by Dylan*/
+/*end of added by Dylan & Isabel*/
 extern "C" pid_t getpid() {
   return CurrProcess().getID();
 }
@@ -293,7 +300,6 @@ static const syscall_t syscalls[] = {
   syscall_t(_init_sig_handler),
   syscall_t(sched_getaffinity),
   syscall_t(sched_setaffinity)
-
 };
 
 static_assert(sizeof(syscalls)/sizeof(syscall_t) == SyscallNum::max, "syscall list error");
