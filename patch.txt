@@ -1,0 +1,1452 @@
+diff --git a/src/APIC.o b/src/APIC.o
+deleted file mode 100644
+index 06e06a9..0000000
+Binary files a/src/APIC.o and /dev/null differ
+diff --git a/src/Access.o b/src/Access.o
+deleted file mode 100644
+index 3a177ed..0000000
+Binary files a/src/Access.o and /dev/null differ
+diff --git a/src/AddressSpace.o b/src/AddressSpace.o
+deleted file mode 100644
+index 5f393e8..0000000
+Binary files a/src/AddressSpace.o and /dev/null differ
+diff --git a/src/BlockingSync.o b/src/BlockingSync.o
+deleted file mode 100644
+index 5aeba7d..0000000
+Binary files a/src/BlockingSync.o and /dev/null differ
+diff --git a/src/CPU.o b/src/CPU.o
+deleted file mode 100644
+index 34b0053..0000000
+Binary files a/src/CPU.o and /dev/null differ
+diff --git a/src/Devices.o b/src/Devices.o
+deleted file mode 100644
+index f581400..0000000
+Binary files a/src/Devices.o and /dev/null differ
+diff --git a/src/Experiments.o b/src/Experiments.o
+deleted file mode 100644
+index 3d73636..0000000
+Binary files a/src/Experiments.o and /dev/null differ
+diff --git a/src/FrameManager.o b/src/FrameManager.o
+deleted file mode 100644
+index 99db4c5..0000000
+Binary files a/src/FrameManager.o and /dev/null differ
+diff --git a/src/Gdb.o b/src/Gdb.o
+deleted file mode 100644
+index 24ff8ac..0000000
+Binary files a/src/Gdb.o and /dev/null differ
+diff --git a/src/GdbAsm.o b/src/GdbAsm.o
+deleted file mode 100644
+index 4ce4ad9..0000000
+Binary files a/src/GdbAsm.o and /dev/null differ
+diff --git a/src/ISA_DMA.o b/src/ISA_DMA.o
+deleted file mode 100644
+index 0e16a33..0000000
+Binary files a/src/ISA_DMA.o and /dev/null differ
+diff --git a/src/InitProcess.o b/src/InitProcess.o
+deleted file mode 100644
+index 5302028..0000000
+Binary files a/src/InitProcess.o and /dev/null differ
+diff --git a/src/Kernel.o b/src/Kernel.o
+deleted file mode 100644
+index f8f573f..0000000
+Binary files a/src/Kernel.o and /dev/null differ
+diff --git a/src/Keyboard.o b/src/Keyboard.o
+deleted file mode 100644
+index 0c7021a..0000000
+Binary files a/src/Keyboard.o and /dev/null differ
+diff --git a/src/LockTest.o b/src/LockTest.o
+deleted file mode 100644
+index ebcee91..0000000
+Binary files a/src/LockTest.o and /dev/null differ
+diff --git a/src/Machine.o b/src/Machine.o
+deleted file mode 100644
+index 2f4a5b9..0000000
+Binary files a/src/Machine.o and /dev/null differ
+diff --git a/src/Makefile.dep b/src/Makefile.dep
+deleted file mode 100644
+index e69de29..0000000
+diff --git a/src/Makefile.state b/src/Makefile.state
+deleted file mode 100644
+index 8cbfe61..0000000
+--- a/src/Makefile.state
++++ /dev/null
+@@ -1,2 +0,0 @@
+-CC_SAVE=/usr/local/kos/cross/gcc/bin/x86_64-pc-elf-gcc
+-RGDB_SAVE=
+diff --git a/src/MemoryManager.o b/src/MemoryManager.o
+deleted file mode 100644
+index 3b40024..0000000
+Binary files a/src/MemoryManager.o and /dev/null differ
+diff --git a/src/Multiboot.o b/src/Multiboot.o
+deleted file mode 100644
+index 6e92c40..0000000
+Binary files a/src/Multiboot.o and /dev/null differ
+diff --git a/src/Output.o b/src/Output.o
+deleted file mode 100644
+index 80146b8..0000000
+Binary files a/src/Output.o and /dev/null differ
+diff --git a/src/PCI.o b/src/PCI.o
+deleted file mode 100644
+index 02e11bc..0000000
+Binary files a/src/PCI.o and /dev/null differ
+diff --git a/src/PIT.o b/src/PIT.o
+deleted file mode 100644
+index 2195005..0000000
+Binary files a/src/PIT.o and /dev/null differ
+diff --git a/src/Paging.o b/src/Paging.o
+deleted file mode 100644
+index 63707c1..0000000
+Binary files a/src/Paging.o and /dev/null differ
+diff --git a/src/Process.o b/src/Process.o
+deleted file mode 100644
+index 0751e5a..0000000
+Binary files a/src/Process.o and /dev/null differ
+diff --git a/src/Processor.o b/src/Processor.o
+deleted file mode 100644
+index 3361daf..0000000
+Binary files a/src/Processor.o and /dev/null differ
+diff --git a/src/RTC.o b/src/RTC.o
+deleted file mode 100644
+index 367a0ae..0000000
+Binary files a/src/RTC.o and /dev/null differ
+diff --git a/src/Scheduler.o b/src/Scheduler.o
+deleted file mode 100644
+index e4fb28a..0000000
+Binary files a/src/Scheduler.o and /dev/null differ
+diff --git a/src/Stack.o b/src/Stack.o
+deleted file mode 100644
+index a8b15f4..0000000
+Binary files a/src/Stack.o and /dev/null differ
+diff --git a/src/TcpTest.o b/src/TcpTest.o
+deleted file mode 100644
+index 81b0f83..0000000
+Binary files a/src/TcpTest.o and /dev/null differ
+diff --git a/src/Thread.o b/src/Thread.o
+deleted file mode 100644
+index d834a4c..0000000
+Binary files a/src/Thread.o and /dev/null differ
+diff --git a/src/asm_functions.o b/src/asm_functions.o
+deleted file mode 100644
+index 4854fa3..0000000
+Binary files a/src/asm_functions.o and /dev/null differ
+diff --git a/src/boot.o b/src/boot.o
+deleted file mode 100644
+index a204262..0000000
+Binary files a/src/boot.o and /dev/null differ
+diff --git a/src/extern/acpica/libacpica.a b/src/extern/acpica/libacpica.a
+deleted file mode 100644
+index 87f0a12..0000000
+Binary files a/src/extern/acpica/libacpica.a and /dev/null differ
+diff --git a/src/extern/cdi/Makefile.dep b/src/extern/cdi/Makefile.dep
+deleted file mode 100644
+index 33dd4a8..0000000
+--- a/src/extern/cdi/Makefile.dep
++++ /dev/null
+@@ -1,35 +0,0 @@
+-device.o: e1000/device.c cdi_glue.h include/cdi.h include/cdi-osdep.h \
+- include/cdi/lists.h include/cdi/misc.h include/cdi/pci.h \
+- include/cdi/mem.h e1000/device.h include/cdi/net.h e1000/e1000_io.h \
+- include/cdi/io.h
+-main.o: e1000/main.c cdi_glue.h include/cdi/net.h include/cdi.h \
+- include/cdi-osdep.h include/cdi/lists.h include/cdi/pci.h \
+- include/cdi/misc.h e1000/device.h
+-cdi_glue.o: cdi_glue.cc \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../testoptions.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../runtime/BlockingSync.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../generic/EmbeddedContainers.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../generic/basics.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../kernel/OutputBasic.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../runtime/Runtime.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../kernel/AddressSpace.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../kernel/FrameManager.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../generic/Bitmap.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../generic/bitmanip.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../kernel/MemoryManager.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/Memory.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/asmshare.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/SpinLock.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/CPU.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/Processor.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/asmdecl.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/Descriptors.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../kernel/Output.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/Paging.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../machine/Machine.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../runtime/Scheduler.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../runtime/Thread.h \
+- /home/ugc/ianiedli/kos/src/extern/cdi/../../devices/PCI.h include/cdi.h \
+- include/cdi-osdep.h include/cdi/lists.h include/cdi/pci.h \
+- include/cdi/mem.h include/cdi/misc.h include/cdi/net.h
+diff --git a/src/extern/cdi/cdi_glue.o b/src/extern/cdi/cdi_glue.o
+deleted file mode 100644
+index 439edec..0000000
+Binary files a/src/extern/cdi/cdi_glue.o and /dev/null differ
+diff --git a/src/extern/cdi/device.o b/src/extern/cdi/device.o
+deleted file mode 100644
+index cd2568d..0000000
+Binary files a/src/extern/cdi/device.o and /dev/null differ
+diff --git a/src/extern/cdi/libcdi.o b/src/extern/cdi/libcdi.o
+deleted file mode 100644
+index dd6c833..0000000
+Binary files a/src/extern/cdi/libcdi.o and /dev/null differ
+diff --git a/src/extern/cdi/main.o b/src/extern/cdi/main.o
+deleted file mode 100644
+index f3434bb..0000000
+Binary files a/src/extern/cdi/main.o and /dev/null differ
+diff --git a/src/extern/dlmalloc/malloc.o b/src/extern/dlmalloc/malloc.o
+deleted file mode 100644
+index 514f4e4..0000000
+Binary files a/src/extern/dlmalloc/malloc.o and /dev/null differ
+diff --git a/src/extern/lwip/Makefile.dep b/src/extern/lwip/Makefile.dep
+deleted file mode 100644
+index 70b0636..0000000
+--- a/src/extern/lwip/Makefile.dep
++++ /dev/null
+@@ -1,355 +0,0 @@
+-dhcp.o: lwip/src/core/dhcp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/dhcp.h \
+- lwip/src/include/ipv4/lwip/autoip.h lwip/src/include/lwip/dns.h \
+- lwip/src/include/netif/etharp.h
+-mem.o: lwip/src/core/mem.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/sys.h lwip/src/include/lwip/err.h arch/sys_arch.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h
+-init.o: lwip/src/core/init.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/init.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h lwip/src/include/lwip/sys.h \
+- lwip/src/include/lwip/err.h arch/sys_arch.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/sockets.h \
+- lwip/src/include/ipv4/lwip/inet.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/raw.h lwip/src/include/lwip/udp.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/ipv4/lwip/icmp.h lwip/src/include/lwip/snmp_msg.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/lwip/snmp_structs.h \
+- lwip/src/include/ipv4/lwip/autoip.h lwip/src/include/ipv4/lwip/igmp.h \
+- lwip/src/include/lwip/dns.h lwip/src/include/lwip/timers.h \
+- lwip/src/include/netif/etharp.h lwip/src/include/lwip/api.h \
+- lwip/src/include/lwip/netbuf.h
+-memp.o: lwip/src/core/memp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/raw.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/api.h \
+- lwip/src/include/lwip/netbuf.h lwip/src/include/lwip/sys.h \
+- arch/sys_arch.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/netifapi.h \
+- lwip/src/include/lwip/timers.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/netif/etharp.h lwip/src/include/ipv4/lwip/ip_frag.h \
+- lwip/src/include/lwip/snmp_structs.h lwip/src/include/lwip/snmp_msg.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/lwip/dns.h \
+- lwip/src/include/netif/ppp_oe.h
+-sys.o: lwip/src/core/sys.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/sys.h lwip/src/include/lwip/err.h arch/sys_arch.h
+-tcp_in.o: lwip/src/core/tcp_in.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/def.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/snmp.h arch/perf.h
+-dns.o: lwip/src/core/dns.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h
+-raw.o: lwip/src/core/raw.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/raw.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/mem.h arch/perf.h
+-tcp.o: lwip/src/core/tcp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/tcp.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/stats.h
+-pbuf.o: lwip/src/core/pbuf.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- arch/perf.h lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/api.h \
+- lwip/src/include/lwip/netbuf.h lwip/src/include/lwip/netifapi.h \
+- lwip/src/include/lwip/timers.h
+-netif.o: lwip/src/core/netif.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/tcp_impl.h \
+- lwip/src/include/lwip/tcp.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/ipv4/lwip/igmp.h \
+- lwip/src/include/netif/etharp.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netbuf.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/lwip/timers.h \
+- lwip/src/include/lwip/dhcp.h lwip/src/include/lwip/udp.h
+-stats.o: lwip/src/core/stats.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h
+-timers.o: lwip/src/core/timers.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/timers.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/ipv4/lwip/icmp.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h lwip/src/include/lwip/tcpip.h \
+- lwip/src/include/lwip/api_msg.h lwip/src/include/ipv4/lwip/igmp.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netbuf.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/ipv4/lwip/ip_frag.h \
+- lwip/src/include/netif/etharp.h lwip/src/include/lwip/dhcp.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/ipv4/lwip/autoip.h \
+- lwip/src/include/lwip/dns.h
+-def.o: lwip/src/core/def.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/def.h
+-udp.o: lwip/src/core/udp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h \
+- lwip/src/include/ipv4/lwip/icmp.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/snmp.h arch/perf.h \
+- lwip/src/include/lwip/dhcp.h
+-tcp_out.o: lwip/src/core/tcp_out.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/def.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/snmp.h
+-ip_frag.o: lwip/src/core/ipv4/ip_frag.c lwip/src/include/lwip/opt.h \
+- lwipopts.h lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
+- arch/cc.h lwip/src/include/ipv4/lwip/ip_frag.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/netif.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h lwip/src/include/lwip/snmp.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/ipv4/lwip/icmp.h
+-inet.o: lwip/src/core/ipv4/inet.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/ipv4/lwip/inet.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h
+-ip_addr.o: lwip/src/core/ipv4/ip_addr.c lwip/src/include/lwip/opt.h \
+- lwipopts.h lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
+- arch/cc.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/pbuf.h
+-igmp.o: lwip/src/core/ipv4/igmp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h
+-ip.o: lwip/src/core/ipv4/ip.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/def.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/err.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/ipv4/lwip/ip_frag.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h \
+- lwip/src/include/ipv4/lwip/icmp.h lwip/src/include/ipv4/lwip/igmp.h \
+- lwip/src/include/lwip/raw.h lwip/src/include/lwip/udp.h \
+- lwip/src/include/lwip/tcp_impl.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/lwip/dhcp.h \
+- lwip/src/include/ipv4/lwip/autoip.h lwip/src/include/lwip/stats.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- arch/perf.h
+-autoip.o: lwip/src/core/ipv4/autoip.c lwip/src/include/lwip/opt.h \
+- lwipopts.h lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
+- arch/cc.h
+-inet_chksum.o: lwip/src/core/ipv4/inet_chksum.c \
+- lwip/src/include/lwip/opt.h lwipopts.h lwip/src/include/lwip/debug.h \
+- lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h
+-icmp.o: lwip/src/core/ipv4/icmp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/ipv4/lwip/icmp.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/ipv4/lwip/inet_chksum.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/snmp.h
+-slipif.o: lwip/src/netif/slipif.c lwip/src/include/netif/slipif.h \
+- lwip/src/include/lwip/opt.h lwipopts.h lwip/src/include/lwip/debug.h \
+- lwip/src/include/lwip/arch.h arch/cc.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/pbuf.h
+-etharp.o: lwip/src/netif/etharp.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/snmp.h lwip/src/include/lwip/dhcp.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/ipv4/lwip/autoip.h \
+- lwip/src/include/netif/etharp.h
+-ethernetif.o: lwip/src/netif/ethernetif.c lwip/src/include/lwip/opt.h \
+- lwipopts.h lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
+- arch/cc.h
+-netdb.o: lwip/src/api/netdb.c lwip/src/include/lwip/netdb.h \
+- lwip/src/include/lwip/opt.h lwipopts.h lwip/src/include/lwip/debug.h \
+- lwip/src/include/lwip/arch.h arch/cc.h
+-api_lib.o: lwip/src/api/api_lib.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netbuf.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/err.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/lwip/timers.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/raw.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/ipv4/lwip/icmp.h
+-netifapi.o: lwip/src/api/netifapi.c lwip/src/include/lwip/opt.h \
+- lwipopts.h lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h \
+- arch/cc.h
+-tcpip.o: lwip/src/api/tcpip.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/sys.h lwip/src/include/lwip/err.h arch/sys_arch.h \
+- lwip/src/include/lwip/memp.h lwip/src/include/lwip/memp_std.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/ipv4/lwip/ip_addr.h lwip/src/include/lwip/def.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netbuf.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/lwip/timers.h \
+- lwip/src/include/lwip/init.h lwip/src/include/netif/etharp.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/netif/ppp_oe.h
+-netbuf.o: lwip/src/api/netbuf.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/netbuf.h lwip/src/include/lwip/pbuf.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h
+-err.o: lwip/src/api/err.c lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/opt.h lwipopts.h lwip/src/include/lwip/debug.h \
+- lwip/src/include/lwip/arch.h arch/cc.h
+-api_msg.o: lwip/src/api/api_msg.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/api_msg.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/api.h \
+- lwip/src/include/lwip/netbuf.h lwip/src/include/ipv4/lwip/ip.h \
+- lwip/src/include/lwip/udp.h lwip/src/include/lwip/tcp.h \
+- lwip/src/include/lwip/mem.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/raw.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h lwip/src/include/lwip/tcpip.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/lwip/timers.h \
+- lwip/src/include/lwip/dns.h
+-sockets.o: lwip/src/api/sockets.c lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/sockets.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/def.h lwip/src/include/ipv4/lwip/inet.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netbuf.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/err.h \
+- lwip/src/include/lwip/sys.h arch/sys_arch.h \
+- lwip/src/include/ipv4/lwip/igmp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/tcp.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/ipv4/lwip/icmp.h \
+- lwip/src/include/lwip/raw.h lwip/src/include/lwip/udp.h \
+- lwip/src/include/lwip/tcpip.h lwip/src/include/lwip/api_msg.h \
+- lwip/src/include/lwip/netifapi.h lwip/src/include/lwip/timers.h
+-lwip_glue.o: lwip_glue.cc \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../testoptions.h \
+- lwip/src/include/lwip/def.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/opt.h lwipopts.h lwip/src/include/lwip/debug.h \
+- lwip/src/include/lwip/dhcp.h lwip/src/include/lwip/netif.h \
+- lwip/src/include/lwip/err.h lwip/src/include/ipv4/lwip/ip_addr.h \
+- lwip/src/include/lwip/pbuf.h lwip/src/include/lwip/udp.h \
+- lwip/src/include/ipv4/lwip/ip.h lwip/src/include/lwip/mem.h \
+- lwip/src/include/lwip/netbuf.h lwip/src/include/lwip/snmp.h \
+- lwip/src/include/lwip/stats.h lwip/src/include/lwip/memp.h \
+- lwip/src/include/lwip/memp_std.h lwip/src/include/lwip/sys.h \
+- arch/sys_arch.h lwip/src/include/lwip/tcpip.h \
+- lwip/src/include/lwip/api_msg.h lwip/src/include/ipv4/lwip/igmp.h \
+- lwip/src/include/lwip/api.h lwip/src/include/lwip/netifapi.h \
+- lwip/src/include/lwip/timers.h lwip/src/include/netif/etharp.h \
+- lwip/src/include/netif/ppp_oe.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/MemoryManager.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Memory.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/bitmanip.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/basics.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/OutputBasic.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/asmshare.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/SpinLock.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/CPU.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Processor.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/asmdecl.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Descriptors.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/Output.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/Bitmap.h
+-sys_arch.o: sys_arch.cc \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../testoptions.h \
+- lwip/src/include/lwip/sys.h lwip/src/include/lwip/opt.h lwipopts.h \
+- lwip/src/include/lwip/debug.h lwip/src/include/lwip/arch.h arch/cc.h \
+- lwip/src/include/lwip/err.h arch/sys_arch.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/Buffers.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/basics.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/OutputBasic.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../runtime/SyncQueues.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../runtime/BlockingSync.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/EmbeddedContainers.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../runtime/Runtime.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/AddressSpace.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/FrameManager.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/Bitmap.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../generic/bitmanip.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/MemoryManager.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Memory.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/asmshare.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/SpinLock.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/CPU.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Processor.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/asmdecl.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Descriptors.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/Output.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Paging.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../machine/Machine.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../runtime/Scheduler.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../runtime/Thread.h \
+- /home/ugc/ianiedli/kos/src/extern/lwip/../../kernel/Clock.h
+diff --git a/src/extern/lwip/api_lib.o b/src/extern/lwip/api_lib.o
+deleted file mode 100644
+index cb4ddae..0000000
+Binary files a/src/extern/lwip/api_lib.o and /dev/null differ
+diff --git a/src/extern/lwip/api_msg.o b/src/extern/lwip/api_msg.o
+deleted file mode 100644
+index 1df5fc4..0000000
+Binary files a/src/extern/lwip/api_msg.o and /dev/null differ
+diff --git a/src/extern/lwip/autoip.o b/src/extern/lwip/autoip.o
+deleted file mode 100644
+index 1dd2ada..0000000
+Binary files a/src/extern/lwip/autoip.o and /dev/null differ
+diff --git a/src/extern/lwip/def.o b/src/extern/lwip/def.o
+deleted file mode 100644
+index ba4d1e3..0000000
+Binary files a/src/extern/lwip/def.o and /dev/null differ
+diff --git a/src/extern/lwip/dhcp.o b/src/extern/lwip/dhcp.o
+deleted file mode 100644
+index a19b103..0000000
+Binary files a/src/extern/lwip/dhcp.o and /dev/null differ
+diff --git a/src/extern/lwip/dns.o b/src/extern/lwip/dns.o
+deleted file mode 100644
+index 98ed7d8..0000000
+Binary files a/src/extern/lwip/dns.o and /dev/null differ
+diff --git a/src/extern/lwip/err.o b/src/extern/lwip/err.o
+deleted file mode 100644
+index fecaab3..0000000
+Binary files a/src/extern/lwip/err.o and /dev/null differ
+diff --git a/src/extern/lwip/etharp.o b/src/extern/lwip/etharp.o
+deleted file mode 100644
+index c028128..0000000
+Binary files a/src/extern/lwip/etharp.o and /dev/null differ
+diff --git a/src/extern/lwip/ethernetif.o b/src/extern/lwip/ethernetif.o
+deleted file mode 100644
+index 33e0e0e..0000000
+Binary files a/src/extern/lwip/ethernetif.o and /dev/null differ
+diff --git a/src/extern/lwip/icmp.o b/src/extern/lwip/icmp.o
+deleted file mode 100644
+index 9a73820..0000000
+Binary files a/src/extern/lwip/icmp.o and /dev/null differ
+diff --git a/src/extern/lwip/igmp.o b/src/extern/lwip/igmp.o
+deleted file mode 100644
+index 974c6f2..0000000
+Binary files a/src/extern/lwip/igmp.o and /dev/null differ
+diff --git a/src/extern/lwip/inet.o b/src/extern/lwip/inet.o
+deleted file mode 100644
+index d302b17..0000000
+Binary files a/src/extern/lwip/inet.o and /dev/null differ
+diff --git a/src/extern/lwip/inet_chksum.o b/src/extern/lwip/inet_chksum.o
+deleted file mode 100644
+index 34a5e5d..0000000
+Binary files a/src/extern/lwip/inet_chksum.o and /dev/null differ
+diff --git a/src/extern/lwip/init.o b/src/extern/lwip/init.o
+deleted file mode 100644
+index 80e287c..0000000
+Binary files a/src/extern/lwip/init.o and /dev/null differ
+diff --git a/src/extern/lwip/ip.o b/src/extern/lwip/ip.o
+deleted file mode 100644
+index cfa7b64..0000000
+Binary files a/src/extern/lwip/ip.o and /dev/null differ
+diff --git a/src/extern/lwip/ip_addr.o b/src/extern/lwip/ip_addr.o
+deleted file mode 100644
+index 38af07e..0000000
+Binary files a/src/extern/lwip/ip_addr.o and /dev/null differ
+diff --git a/src/extern/lwip/ip_frag.o b/src/extern/lwip/ip_frag.o
+deleted file mode 100644
+index ef8ff31..0000000
+Binary files a/src/extern/lwip/ip_frag.o and /dev/null differ
+diff --git a/src/extern/lwip/liblwip.o b/src/extern/lwip/liblwip.o
+deleted file mode 100644
+index 8eac703..0000000
+Binary files a/src/extern/lwip/liblwip.o and /dev/null differ
+diff --git a/src/extern/lwip/lwip_glue.o b/src/extern/lwip/lwip_glue.o
+deleted file mode 100644
+index a366ee2..0000000
+Binary files a/src/extern/lwip/lwip_glue.o and /dev/null differ
+diff --git a/src/extern/lwip/mem.o b/src/extern/lwip/mem.o
+deleted file mode 100644
+index 81ac6b6..0000000
+Binary files a/src/extern/lwip/mem.o and /dev/null differ
+diff --git a/src/extern/lwip/memp.o b/src/extern/lwip/memp.o
+deleted file mode 100644
+index a81a691..0000000
+Binary files a/src/extern/lwip/memp.o and /dev/null differ
+diff --git a/src/extern/lwip/netbuf.o b/src/extern/lwip/netbuf.o
+deleted file mode 100644
+index f9c942a..0000000
+Binary files a/src/extern/lwip/netbuf.o and /dev/null differ
+diff --git a/src/extern/lwip/netdb.o b/src/extern/lwip/netdb.o
+deleted file mode 100644
+index c51fd98..0000000
+Binary files a/src/extern/lwip/netdb.o and /dev/null differ
+diff --git a/src/extern/lwip/netif.o b/src/extern/lwip/netif.o
+deleted file mode 100644
+index 4c12fcf..0000000
+Binary files a/src/extern/lwip/netif.o and /dev/null differ
+diff --git a/src/extern/lwip/netifapi.o b/src/extern/lwip/netifapi.o
+deleted file mode 100644
+index 7238240..0000000
+Binary files a/src/extern/lwip/netifapi.o and /dev/null differ
+diff --git a/src/extern/lwip/pbuf.o b/src/extern/lwip/pbuf.o
+deleted file mode 100644
+index 35c892e..0000000
+Binary files a/src/extern/lwip/pbuf.o and /dev/null differ
+diff --git a/src/extern/lwip/raw.o b/src/extern/lwip/raw.o
+deleted file mode 100644
+index 07baa39..0000000
+Binary files a/src/extern/lwip/raw.o and /dev/null differ
+diff --git a/src/extern/lwip/slipif.o b/src/extern/lwip/slipif.o
+deleted file mode 100644
+index 256f501..0000000
+Binary files a/src/extern/lwip/slipif.o and /dev/null differ
+diff --git a/src/extern/lwip/sockets.o b/src/extern/lwip/sockets.o
+deleted file mode 100644
+index 36b7c4a..0000000
+Binary files a/src/extern/lwip/sockets.o and /dev/null differ
+diff --git a/src/extern/lwip/stats.o b/src/extern/lwip/stats.o
+deleted file mode 100644
+index b465ebe..0000000
+Binary files a/src/extern/lwip/stats.o and /dev/null differ
+diff --git a/src/extern/lwip/sys.o b/src/extern/lwip/sys.o
+deleted file mode 100644
+index 46370ef..0000000
+Binary files a/src/extern/lwip/sys.o and /dev/null differ
+diff --git a/src/extern/lwip/sys_arch.o b/src/extern/lwip/sys_arch.o
+deleted file mode 100644
+index 1d0fd8f..0000000
+Binary files a/src/extern/lwip/sys_arch.o and /dev/null differ
+diff --git a/src/extern/lwip/tcp.o b/src/extern/lwip/tcp.o
+deleted file mode 100644
+index d73631c..0000000
+Binary files a/src/extern/lwip/tcp.o and /dev/null differ
+diff --git a/src/extern/lwip/tcp_in.o b/src/extern/lwip/tcp_in.o
+deleted file mode 100644
+index 1f54664..0000000
+Binary files a/src/extern/lwip/tcp_in.o and /dev/null differ
+diff --git a/src/extern/lwip/tcp_out.o b/src/extern/lwip/tcp_out.o
+deleted file mode 100644
+index 2caf48d..0000000
+Binary files a/src/extern/lwip/tcp_out.o and /dev/null differ
+diff --git a/src/extern/lwip/tcpip.o b/src/extern/lwip/tcpip.o
+deleted file mode 100644
+index 2393b4c..0000000
+Binary files a/src/extern/lwip/tcpip.o and /dev/null differ
+diff --git a/src/extern/lwip/timers.o b/src/extern/lwip/timers.o
+deleted file mode 100644
+index 07aca80..0000000
+Binary files a/src/extern/lwip/timers.o and /dev/null differ
+diff --git a/src/extern/lwip/udp.o b/src/extern/lwip/udp.o
+deleted file mode 100644
+index 9c729fb..0000000
+Binary files a/src/extern/lwip/udp.o and /dev/null differ
+diff --git a/src/include/kostypes.h b/src/include/kostypes.h
+index 650f684..be993d3 100644
+--- a/src/include/kostypes.h
++++ b/src/include/kostypes.h
+@@ -26,15 +26,12 @@ typedef  int64_t sword;
+ typedef mword vaddr;
+ typedef mword paddr;
+ 
+-typedef mword cpu_set_t;
+-
+ static const mword charbits = 8;
+ static const mword bytebits = 8;
+ 
+ typedef char  buf_t;
+ typedef char* bufptr_t;
+ typedef const char* cbufptr_t;
+-
+ #else
+ #error unsupported architecture: only __x86_64__ supported at this time
+ #endif
+diff --git a/src/include/syscalls.h b/src/include/syscalls.h
+index b017d34..9a9c429 100644
+--- a/src/include/syscalls.h
++++ b/src/include/syscalls.h
+@@ -14,13 +14,9 @@
+ #define MAP_FAILED  ((void *) -1)
+ extern "C" void* mmap(void* addr, size_t len, int prot, int flags, int filedes, off_t off);
+ extern "C" int munmap(void* addr, size_t len);
+-extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
+-extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask);
+ 
+ extern "C" pid_t getcid();
+ 
+-extern "C" long get_core_count();
+-
+ extern "C" int privilege(void*, mword, mword, mword, mword);
+ 
+ namespace SyscallNum {
+@@ -32,7 +28,6 @@ enum : mword {
+   read,
+   write,
+   lseek,
+-  get_core_count,
+   getpid,
+   getcid,
+   usleep,
+@@ -49,8 +44,6 @@ enum : mword {
+   semV,
+   privilege,
+   _init_sig_handler,
+-  sched_getaffinityEnum,
+-  sched_setaffinityEnum,
+   max
+ };
+ 
+diff --git a/src/isr_wrapper.o b/src/isr_wrapper.o
+deleted file mode 100644
+index 02f3d54..0000000
+Binary files a/src/isr_wrapper.o and /dev/null differ
+diff --git a/src/kernel.sys b/src/kernel.sys
+deleted file mode 100755
+index 9d1b724..0000000
+Binary files a/src/kernel.sys and /dev/null differ
+diff --git a/src/kernel.sys.debug b/src/kernel.sys.debug
+deleted file mode 100755
+index 58d93e5..0000000
+Binary files a/src/kernel.sys.debug and /dev/null differ
+diff --git a/src/kernel/syscalls.cc b/src/kernel/syscalls.cc
+index 1a39d1b..5a0bd06 100644
+--- a/src/kernel/syscalls.cc
++++ b/src/kernel/syscalls.cc
+@@ -1,5 +1,5 @@
+ /******************************************************************************
+-    Copyright ï¿½ 2012-2015 Martin Karsten
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -21,8 +21,6 @@
+ #include "kernel/Process.h"
+ #include "world/Access.h"
+ #include "machine/Processor.h"
+-#include "machine/Machine.h"
+-
+ 
+ #include "syscalls.h"
+ #include "pthread.h"
+@@ -117,41 +115,6 @@ extern "C" off_t lseek(int fildes, off_t offset, int whence) {
+   return ret;
+ }
+ 
+-/* I have added a system call here - Priyaa */
+-extern "C" long get_core_count(){
+-	return Machine::getProcessorCount();
+-}
+-/*I have added our system calls here*/
+-extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) {
+-  if(pid != 0){
+-    return EPERM;
+-  }
+-
+-  // auto b = reinterpret_cast<std::uintptr_t>(mask);
+-  // if(b >= 16){
+-  //   return EINVAL;
+-  // }
+-
+-  if( (*mask != 1) && (*mask != 2) && (*mask != 4) && (*mask != 8))
+-  {
+-    return EINVAL;
+-  }
+-  LocalProcessor::getCurrThread()->setAffinityMask(*mask);
+-  LocalProcessor::getScheduler()->yield();
+-
+-  return 0;
+-}
+-
+-extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
+-  if(pid != 0){
+-    return EPERM;
+-  }
+-  *mask = LocalProcessor::getCurrThread()->getAffinityMask();
+-  return *mask;
+-  // return LocalProcessor::getCurrThread()->getAffinityMask();
+-  //processorTable[0].scheduler // scheduler object of core 0
+-}
+-/*end of added by Dylan & Isabel*/
+ extern "C" pid_t getpid() {
+   return CurrProcess().getID();
+ }
+@@ -281,7 +244,6 @@ static const syscall_t syscalls[] = {
+   syscall_t(read),
+   syscall_t(write),
+   syscall_t(lseek),
+-  syscall_t(get_core_count),
+   syscall_t(getpid),
+   syscall_t(getcid),
+   syscall_t(usleep),
+@@ -297,9 +259,7 @@ static const syscall_t syscalls[] = {
+   syscall_t(semP),
+   syscall_t(semV),
+   syscall_t(privilege),
+-  syscall_t(_init_sig_handler),
+-  syscall_t(sched_getaffinity),
+-  syscall_t(sched_setaffinity)
++  syscall_t(_init_sig_handler)
+ };
+ 
+ static_assert(sizeof(syscalls)/sizeof(syscall_t) == SyscallNum::max, "syscall list error");
+diff --git a/src/machine/Machine.cc b/src/machine/Machine.cc
+index 552e385..d10deb0 100644
+--- a/src/machine/Machine.cc
++++ b/src/machine/Machine.cc
+@@ -1,5 +1,5 @@
+ /******************************************************************************
+-    Copyright ï¿½ 2012-2015 Martin Karsten
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -444,11 +444,6 @@ void Machine::setAffinity(Thread& t, mword idx) {
+   t.setAffinity(processorTable[idx].scheduler);
+ }
+ 
+-Scheduler* Machine::getScheduler( mword idx ){
+-  KASSERT1(idx < processorCount, idx);
+-  return processorTable[idx].scheduler;
+-}
+-
+ void Machine::sendIPI(mword idx, uint8_t vec) {
+   MappedAPIC()->sendIPI(processorTable[idx].apicID, vec);
+ }
+@@ -538,7 +533,7 @@ void Machine::setupIDTable() {
+   for (size_t i = 0; i < MaxIrqCount; i += 1) {
+     irqTable[i].ioApicAddr    = 0;
+     irqTable[i].ioApicIrq     = 0;
+-    irqTable[i].globalIrq     = i;
++    irqTable[i].globalIrq     = i; 
+     irqTable[i].overrideFlags = 0;
+   }
+ 
+diff --git a/src/machine/Machine.h b/src/machine/Machine.h
+index ebfb400..d4182a3 100644
+--- a/src/machine/Machine.h
++++ b/src/machine/Machine.h
+@@ -1,5 +1,5 @@
+ /******************************************************************************
+-    Copyright ï¿½ 2012-2015 Martin Karsten
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -51,7 +51,6 @@ public:
+   static void registerIrqSync(mword irq, mword vec);
+   static void registerIrqAsync(mword irq, funcvoid1_t handler, ptr_t ctx);
+   static void deregisterIrqAsync(mword irq, funcvoid1_t handler);
+-  static Scheduler* getScheduler(mword idx );
+ };
+ 
+ void Breakpoint2(vaddr ia = 0) __ninline;
+diff --git a/src/main/InitProcess.cc b/src/main/InitProcess.cc
+index c2b949b..053e8d5 100644
+--- a/src/main/InitProcess.cc
++++ b/src/main/InitProcess.cc
+@@ -1,7 +1,5 @@
+ /******************************************************************************
+-<<<<<<< HEAD
+-    Copyright ï¿½ 2012-2015 Martin Karsten
+-
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -20,8 +18,7 @@
+ 
+ int InitProcess() {
+   Process* p0 = knew<Process>();
+-  p0->exec("schedAffinityTest");
+-/*
++  p0->exec("systest");
+ #if !TESTING_KEYCODE_LOOP
+   Process* p1 = knew<Process>();
+   p1->exec("kbloop");
+@@ -29,7 +26,6 @@ int InitProcess() {
+   Process* p2 = knew<Process>();
+   p2->exec("threadtest");
+   Process* p3 = knew<Process>();
+-<<<<<<< HEAD
+-  p3->exec("manythread");*/
++  p3->exec("manythread");
+   return 0;
+ }
+diff --git a/src/runtime/Runtime.h b/src/runtime/Runtime.h
+index 4bfb188..dfe7125 100644
+--- a/src/runtime/Runtime.h
++++ b/src/runtime/Runtime.h
+@@ -69,8 +69,8 @@ namespace Runtime {
+ 
+   struct RealLock {
+     RealLock() { LocalProcessor::lock(true); }    // disable IRQs
+-    ~RealLock() { LocalProcessor::unlock(true); } // deflate lock count, enable IRQs
+- };
++    // destructor not needed
++  };
+ 
+   /**** AddressSpace-related interface ****/
+ 
+diff --git a/src/runtime/Scheduler.cc b/src/runtime/Scheduler.cc
+index 2691675..7d760c3 100644
+--- a/src/runtime/Scheduler.cc
++++ b/src/runtime/Scheduler.cc
+@@ -1,5 +1,5 @@
+ /******************************************************************************
+-    Copyright ï¿½ 2012-2015 Martin Karsten
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -44,9 +44,7 @@ inline void Scheduler::switchThread(Scheduler* target, Args&... a) {
+   CHECK_LOCK_MIN(sizeof...(Args));
+   Thread* nextThread;
+   readyLock.acquire();
+-//  for (mword i = 0; i < (target ? idlePriority : maxPriority); i += 1) {
+-  for (mword i = 0; i < ((target == this) ? idlePriority : maxPriority);
+-i += 1) {
++  for (mword i = 0; i < (target ? idlePriority : maxPriority); i += 1) {
+     if (!readyQueue[i].empty()) {
+       nextThread = readyQueue[i].pop_front();
+       readyCount -= 1;
+@@ -113,52 +111,11 @@ void Scheduler::resume(Thread& t) {
+   else Runtime::getScheduler()->enqueue(t);
+ }
+ 
+-
+-
+ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
+ #if TESTING_NEVER_MIGRATE
+   switchThread(this);
+ #else /* migration enabled */
+-  //Scheduler* target =  Runtime::getCurrThread()->getAffinity();
+-  Scheduler *target = nullptr;
+-  mword affinityMask = Runtime::getCurrThread()->getAffinityMask();
+-  mword core1 = 10000000;
+-  mword core2 = 10000000;
+-  mword core3 = 10000000;
+-  mword core4 = 10000000;
+-  if( affinityMask == 0 ) {
+-	  /* use Martin's code when no affinity is set via bit mask */
+-	  target =  Runtime::getCurrThread()->getAffinity();
+-   }  else {
+-        if(affinityMask & 1){
+-          core1 = LocalProcessor::getScheduler()->readyCount;
+-  //        core1 = Machine::getScheduler(1)->readyCount;
+-        }
+-        if(affinityMask & 2){
+-          core2 = LocalProcessor::getScheduler()->readyCount;
+-          // core2 = Machine::getScheduler()->readyCount;
+-        }
+-        if(affinityMask & 4){
+-          core3 = LocalProcessor::getScheduler()->readyCount;
+-        //  core3 = Machine::getScheduler()->readyCount;
+-        }
+-        if(affinityMask & 8){
+-          core4 = LocalProcessor::getScheduler()->readyCount;
+-//          core4 = Machine::getScheduler(4->readyCount;
+-        }
+-        if((core1 != 10000000) && (core1 <= core2) && (core1 <= core3) && (core1 <= core4)){
+-          target =  Machine::getScheduler(core1);
+-//          target =  Machine::getScheduler(0);
+-        } else if((core1 != 10000000) && (core2 <= core1) && (core2 <= core3) && (core2 <= core4)){
+-          target =  Machine::getScheduler(core2);
+-        } else if((core1 != 10000000) && (core3 <= core2) && (core3 <= core1) && (core3 <= core4)){
+-          target =  Machine::getScheduler(core3);
+-        } else if((core1 != 10000000) && (core4 <= core1) && (core4 <= core2) && (core4 <= core3)){
+-          target =  Machine::getScheduler(core4);
+-        }
+-    //    switchThread(target);
+-   }
+-
++  Scheduler* target = Runtime::getCurrThread()->getAffinity();
+ #if TESTING_ALWAYS_MIGRATE
+   if (!target) target = partner;
+ #else /* simple load balancing */
+@@ -186,8 +143,3 @@ void Scheduler::terminate() {
+   switchThread(nullptr);
+   unreachable();
+ }
+-
+-void Scheduler::yield(){
+-  Runtime::RealLock rl;
+-  preempt();
+-}
+diff --git a/src/runtime/Scheduler.h b/src/runtime/Scheduler.h
+index 3b49fc0..bc86000 100644
+--- a/src/runtime/Scheduler.h
++++ b/src/runtime/Scheduler.h
+@@ -51,7 +51,6 @@ public:
+   void suspend(BasicLock& lk);
+   void suspend(BasicLock& lk1, BasicLock& lk2);
+   void terminate() __noreturn;
+-  void yield();
+ };
+ 
+ #endif /* _Scheduler_h_ */
+diff --git a/src/runtime/Thread.h b/src/runtime/Thread.h
+index 300a555..a09bb0e 100644
+--- a/src/runtime/Thread.h
++++ b/src/runtime/Thread.h
+@@ -33,9 +33,6 @@ class Thread : public EmbeddedList<Thread>::Link {
+ 
+   mword priority;           // scheduling priority
+   bool affinity;            // stick with scheduler
+-  cpu_set_t affinityMask;	 	 // stick with multiple schedulers
+-  // affinity mask of 0 means that the thread can be scheduled on any processor
+-
+   Scheduler* nextScheduler; // resume on same core (for now)
+ 
+   Runtime::MachContext ctx;
+@@ -50,7 +47,7 @@ protected:
+ 
+   Thread(vaddr sb, size_t ss) :
+     stackPointer(vaddr(this)), stackBottom(sb), stackSize(ss),
+-    priority(defPriority), affinity(false), affinityMask(0), nextScheduler(nullptr),
++    priority(defPriority), affinity(false), nextScheduler(nullptr),
+     state(Running), unblockInfo(nullptr) {}
+ 
+   // called directly when creating idle thread(s)
+@@ -84,10 +81,6 @@ public:
+   }
+ 
+   Thread* setPriority(mword p)      { priority = p; return this; }
+-
+-  void   setAffinityMask( cpu_set_t mask ) { affinityMask = mask; }
+-  cpu_set_t  getAffinityMask() { return affinityMask; }
+-
+   Thread* setAffinity(Scheduler* s) { affinity = (nextScheduler = s); return this; }
+   Scheduler* getAffinity() const    { return affinity ? nextScheduler : nullptr; }
+ 
+diff --git a/src/stage/boot/grub/grub.cfg b/src/stage/boot/grub/grub.cfg
+deleted file mode 100644
+index 0133e73..0000000
+--- a/src/stage/boot/grub/grub.cfg
++++ /dev/null
+@@ -1,13 +0,0 @@
+-set timeout=1
+-set default=0
+-
+-menuentry "KOS" {
+-  multiboot2 /boot/kernel.sys boot,cdi,dev,file,kmem,libc,lwip,perf,pci,proc,tests,threads,vm
+-  module2 /boot/kbloop kbloop sample args
+-  module2 /boot/manythread manythread sample args
+-  module2 /boot/motb motb sample args
+-  module2 /boot/schedAffinityTest schedAffinityTest sample args
+-  module2 /boot/systest systest sample args
+-  module2 /boot/threadtest threadtest sample args
+-  boot
+-}
+diff --git a/src/stage/boot/kbloop b/src/stage/boot/kbloop
+deleted file mode 100755
+index f7f3f5b..0000000
+Binary files a/src/stage/boot/kbloop and /dev/null differ
+diff --git a/src/stage/boot/kernel.sys b/src/stage/boot/kernel.sys
+deleted file mode 100755
+index 9d1b724..0000000
+Binary files a/src/stage/boot/kernel.sys and /dev/null differ
+diff --git a/src/stage/boot/manythread b/src/stage/boot/manythread
+deleted file mode 100755
+index eb18a3b..0000000
+Binary files a/src/stage/boot/manythread and /dev/null differ
+diff --git a/src/stage/boot/motb b/src/stage/boot/motb
+deleted file mode 100644
+index 6db5876..0000000
+--- a/src/stage/boot/motb
++++ /dev/null
+@@ -1,5 +0,0 @@
+-
+-Hello everybody! So glad to see you...
+-
+-Build Date: Sun Jan 29 20:43:39 MST 2017
+-
+diff --git a/src/stage/boot/schedAffinityTest b/src/stage/boot/schedAffinityTest
+deleted file mode 100755
+index f2f6cbf..0000000
+Binary files a/src/stage/boot/schedAffinityTest and /dev/null differ
+diff --git a/src/stage/boot/systest b/src/stage/boot/systest
+deleted file mode 100755
+index e964021..0000000
+Binary files a/src/stage/boot/systest and /dev/null differ
+diff --git a/src/stage/boot/threadtest b/src/stage/boot/threadtest
+deleted file mode 100755
+index d3911f1..0000000
+Binary files a/src/stage/boot/threadtest and /dev/null differ
+diff --git a/src/syscall_wrapper.o b/src/syscall_wrapper.o
+deleted file mode 100644
+index dfd6da5..0000000
+Binary files a/src/syscall_wrapper.o and /dev/null differ
+diff --git a/src/syscalls.o b/src/syscalls.o
+deleted file mode 100644
+index e067674..0000000
+Binary files a/src/syscalls.o and /dev/null differ
+diff --git a/src/ulib/Makefile.dep b/src/ulib/Makefile.dep
+deleted file mode 100644
+index f5be0e2..0000000
+--- a/src/ulib/Makefile.dep
++++ /dev/null
+@@ -1,9 +0,0 @@
+-pthread.o: pthread.cc /home/ugc/ianiedli/kos/src/ulib/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/pthread.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h
+-libKOS.o: libKOS.cc /home/ugc/ianiedli/kos/src/ulib/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/ulib/../include/kostypes.h
+diff --git a/src/ulib/libKOS.a b/src/ulib/libKOS.a
+deleted file mode 100644
+index b53fb3c..0000000
+Binary files a/src/ulib/libKOS.a and /dev/null differ
+diff --git a/src/ulib/libKOS.cc b/src/ulib/libKOS.cc
+index 7e00197..46c6bec 100644
+--- a/src/ulib/libKOS.cc
++++ b/src/ulib/libKOS.cc
+@@ -1,5 +1,5 @@
+ /******************************************************************************
+-    Copyright ï¿½ 2012-2015 Martin Karsten
++    Copyright © 2012-2015 Martin Karsten
+ 
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+@@ -15,7 +15,6 @@
+     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ ******************************************************************************/
+ #include "syscalls.h"
+-#include "kostypes.h"
+ 
+ #include <string.h>
+ 
+@@ -71,29 +70,10 @@ extern "C" off_t lseek(int fildes, off_t offset, int whence) {
+   if (ret < 0) { *__errno() = -ret; return -1; } else return ret;
+ }
+ 
+-/*added by Priyaa*/
+-extern "C" long get_core_count() {
+-  return syscallStub(SyscallNum::get_core_count);
+-}
+-
+ extern "C" pid_t getpid() {
+   return syscallStub(SyscallNum::getpid);
+ }
+ 
+-/*added by Dylan & Isabel*/
+-extern "C" int sched_setaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask) {
+-  //return
+-  syscallStub(SyscallNum::sched_setaffinityEnum, pid, cpusetsize, mword(mask));
+-  //syscallStub(SyscallNum::sched_setaffinityEnum, pid, cpusetsize, mword(mask));
+-}
+-
+-extern "C" int sched_getaffinity(pid_t pid, size_t cpusetsize, cpu_set_t *mask){
+-  //
+- syscallStub(SyscallNum::sched_getaffinityEnum, pid, cpusetsize, mword(mask));
+-  //syscallStub(SyscallNum::sched_getaffinityEnum, pid, cpusetsize, mword(mask));
+-}
+-/*end of added by Dylan & Isabel*/
+-
+ extern "C" pid_t getcid() {
+   return syscallStub(SyscallNum::getcid);
+ }
+diff --git a/src/ulib/libKOS.o b/src/ulib/libKOS.o
+deleted file mode 100644
+index ce1decc..0000000
+Binary files a/src/ulib/libKOS.o and /dev/null differ
+diff --git a/src/ulib/malloc.o b/src/ulib/malloc.o
+deleted file mode 100644
+index 2186a7c..0000000
+Binary files a/src/ulib/malloc.o and /dev/null differ
+diff --git a/src/ulib/pthread.o b/src/ulib/pthread.o
+deleted file mode 100644
+index 3c47f21..0000000
+Binary files a/src/ulib/pthread.o and /dev/null differ
+diff --git a/src/ulib/sighandler.o b/src/ulib/sighandler.o
+deleted file mode 100644
+index c7605f6..0000000
+Binary files a/src/ulib/sighandler.o and /dev/null differ
+diff --git a/src/ulib/syscallStub.o b/src/ulib/syscallStub.o
+deleted file mode 100644
+index 95c821b..0000000
+Binary files a/src/ulib/syscallStub.o and /dev/null differ
+diff --git a/src/user/Makefile.dep b/src/user/Makefile.dep
+deleted file mode 100644
+index b2cd473..0000000
+--- a/src/user/Makefile.dep
++++ /dev/null
+@@ -1,22 +0,0 @@
+-schedAffinityTest.o: schedAffinityTest.cc \
+- /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+-threadtest.o: threadtest.cc \
+- /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+-systest.o: systest.cc /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/user/../include/kostypes.h
+-manythread.o: manythread.cc \
+- /home/ugc/ianiedli/kos/src/user/../testoptions.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h \
+- /home/ugc/ianiedli/kos/src/user/../include/kostypes.h \
+- /home/ugc/ianiedli/kos/src/user/../include/pthread.h \
+- /home/ugc/ianiedli/kos/src/user/../include/syscalls.h
+-kbloop.o: kbloop.cc /home/ugc/ianiedli/kos/src/user/../testoptions.h
+diff --git a/src/user/exec/kbloop b/src/user/exec/kbloop
+deleted file mode 100755
+index f7f3f5b..0000000
+Binary files a/src/user/exec/kbloop and /dev/null differ
+diff --git a/src/user/exec/manythread b/src/user/exec/manythread
+deleted file mode 100755
+index eb18a3b..0000000
+Binary files a/src/user/exec/manythread and /dev/null differ
+diff --git a/src/user/exec/motb b/src/user/exec/motb
+deleted file mode 100644
+index 6db5876..0000000
+--- a/src/user/exec/motb
++++ /dev/null
+@@ -1,5 +0,0 @@
+-
+-Hello everybody! So glad to see you...
+-
+-Build Date: Sun Jan 29 20:43:39 MST 2017
+-
+diff --git a/src/user/exec/schedAffinityTest b/src/user/exec/schedAffinityTest
+deleted file mode 100755
+index f2f6cbf..0000000
+Binary files a/src/user/exec/schedAffinityTest and /dev/null differ
+diff --git a/src/user/exec/systest b/src/user/exec/systest
+deleted file mode 100755
+index e964021..0000000
+Binary files a/src/user/exec/systest and /dev/null differ
+diff --git a/src/user/exec/threadtest b/src/user/exec/threadtest
+deleted file mode 100755
+index d3911f1..0000000
+Binary files a/src/user/exec/threadtest and /dev/null differ
+diff --git a/src/user/kbloop.o b/src/user/kbloop.o
+deleted file mode 100644
+index b12f282..0000000
+Binary files a/src/user/kbloop.o and /dev/null differ
+diff --git a/src/user/manythread.o b/src/user/manythread.o
+deleted file mode 100644
+index f9cd4c7..0000000
+Binary files a/src/user/manythread.o and /dev/null differ
+diff --git a/src/user/schedAffinityTest.cc b/src/user/schedAffinityTest.cc
+deleted file mode 100644
+index b1458ef..0000000
+--- a/src/user/schedAffinityTest.cc
++++ /dev/null
+@@ -1,127 +0,0 @@
+-#include <iostream>
+-#include "syscalls.h"
+-#include "pthread.h"
+-#include "errno.h"
+-
+-using namespace std;
+-
+-#define MASK1 0x1  // 00001
+-#define MASK2 0x2  // 00010
+-#define MASK3 0x4  // 00100
+-#define MASK4 0x8  // 01000
+-#define MASK5 0x6  // 00110
+-#define MASK6 0x10 // 10000
+-
+-#define REPETITION 5
+-
+-
+-void* dummy (void *args) {
+-   //pinning thread to core 1
+-   cpu_set_t mask = MASK2;
+-   sched_setaffinity( 0, sizeof(cpu_set_t), &mask );
+-   int count = REPETITION;
+-   while (count--){
+-		for( int i=0; i<1000000000; i++) asm("");
+-	}
+-}
+-
+-void whereAmI(){
+-   /* test on which core the process is running */
+-   int count = REPETITION;
+-   while (count--){
+-	   for( int i=0; i<100000000; i++) asm("");
+-         cout << "I am running on core "<< getcid() << endl;
+-   }
+-}
+-
+-void printAffinity( cpu_set_t affinityMask ){
+-   mword cpuCount = get_core_count();
+-	mword bitmask  = 0x1;
+-   for( mword i=0; i<cpuCount; i++ ){
+-		if( (affinityMask & (bitmask << i)) != 0 ){
+-			cout << "Current process has affinity to core "<<i << endl;
+-		}
+-	}
+-}
+-
+-int main() {
+-
+-   int err=5;
+-   cout << "Test process is running on core "<< getcid() << endl;
+-
+-   /* sched_setaffinity */
+-   cout << endl << "SCHED_SETAFFINITY TEST 1" << endl;
+-   cpu_set_t affinityMask = MASK6;
+-//   cout << "Setting Mask to "<< affinityMask << " for pid 0 "<< endl;
+-   err = sched_setaffinity( 0, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM || err == EINVAL ){
+-      cout << "sched_setaffinity unsuccessful" << endl;
+-   } else {
+-//cout << "sched_setaffinity successful" << endl;
+-	   whereAmI();
+-   }
+-
+-   cout << endl << "SCHED_SETAFFINITY TEST 2" << endl;
+-   err = 5;
+-   affinityMask = MASK1;
+-//   cout << "Setting Mask to "<< affinityMask << " for pid 2" << endl;
+-   err = sched_setaffinity( 2, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM || err == EINVAL ){
+-      cout << "sched_setaffinity unsuccessful"<< endl;
+-   }else {
+-    //  cout << "sched_setaffinity successful" << endl;
+-   	whereAmI();
+-   }
+-
+-   cout << endl << "SCHED_SETAFFINITY TEST 3" << endl;
+-   err = 5;
+-   affinityMask = MASK1;
+-//   cout << "Setting Mask to "<< affinityMask << " for pid 0 " << endl;
+-   err = sched_setaffinity( 0, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM || err == EINVAL ){
+-      cout << "sched_setaffinity unsuccessful" << endl;
+-   }else{
+-    //  cout << "sched_setaffinity successful " << endl;
+-   	whereAmI();
+-	}
+-
+-
+-   cout << endl << "SCHED_SETAFFINITY TEST 4" << endl;
+-   err = 5;
+-   affinityMask = MASK5;
+-   cout << "Setting Mask to "<< affinityMask << " for pid 0 " << endl;
+-   err = sched_setaffinity( 0, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM || err == EINVAL){
+-      cout << "sched_setaffinity unsuccessful" << endl;
+-   }else{
+-//      cout << "sched_setaffinity successful" << endl; 
+-   	whereAmI();
+-	}
+-   pthread_t t1;
+-   pthread_create(&t1, nullptr, dummy, nullptr);
+-   whereAmI();
+-   whereAmI();
+-   whereAmI();
+-
+-   /* sched_getaffinity */
+-   cout << endl << "SCHED_GETAFFINITY TEST 1" << endl;
+-   err = 5;
+-   err = sched_getaffinity( 2, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM ){
+-      cout << "sched_getaffinity unsuccessful" << endl;
+-   }else{
+-  		printAffinity(affinityMask);
+-   }
+-
+-
+-   cout << endl << "SCHED_GETAFFINITY TEST 2" << endl;
+-   err = 5;
+-   err = sched_getaffinity( 0, sizeof(cpu_set_t), &affinityMask );
+-   if( err == EPERM ){
+-      cout << "sched_getaffinity unsuccessful" << endl;
+-   }else{
+-  		printAffinity(affinityMask);
+-   }
+-#if 0
+-#endif
+-}
+diff --git a/src/user/schedAffinityTest.o b/src/user/schedAffinityTest.o
+deleted file mode 100644
+index 8c24607..0000000
+Binary files a/src/user/schedAffinityTest.o and /dev/null differ
+diff --git a/src/user/systest.o b/src/user/systest.o
+deleted file mode 100644
+index 12480db..0000000
+Binary files a/src/user/systest.o and /dev/null differ
+diff --git a/src/user/threadtest.o b/src/user/threadtest.o
+deleted file mode 100644
+index aaa8209..0000000
+Binary files a/src/user/threadtest.o and /dev/null differ
