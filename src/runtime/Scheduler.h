@@ -33,11 +33,6 @@ class Scheduler {
   volatile mword preemption;
   volatile mword resumption;
 
-  /*added by Isabel*/
-  static mword defaultEpochLength; //should it be unsigned int instead of mword?
-  static mword schedMinGranularity; //   "    "
-  /*end added by Isabel*/
-
   Scheduler* partner;
 
   template<typename... Args>
@@ -49,6 +44,10 @@ class Scheduler {
   const Scheduler& operator=(const Scheduler&) = delete; // no assignment
 
 public:
+  /*added by Isabel*/
+  static mword defaultEpochLength; //should it be unsigned int instead of mword?
+  static mword schedMinGranularity; //   "    "
+  /*end added by Isabel*/
   Scheduler();
   void setPartner(Scheduler& s) { partner = &s; }
   static void resume(Thread& t);
