@@ -78,12 +78,12 @@ void kosMain() {
         KOUT::out1(c);
         if(x == false)
         {
-            Scheduler::defaultEpochLength = (mword)sc;
+            Scheduler::defaultEpochLength = (mword)sc.c_str;
               sc = "";
               //x = true;
         }
         else
-          Scheduler::schedMinGranularity = (mword)sc;
+          Scheduler::schedMinGranularity = (mword)sc.c_str;
       }
       else
         KOUT::out1(c);
