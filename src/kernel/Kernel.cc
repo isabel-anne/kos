@@ -56,7 +56,7 @@ void kosMain() {
   /*begin edited by Isabel*/
   auto iter2 = kernelFS.find("schedparam");
   if (iter2 == kernelFS.end()) {
-    KOUT::outl("motb information not found");
+    KOUT::outl("schedparam information not found");
   } else {
     FileAccess f(iter2->second);
     for (;;) {
