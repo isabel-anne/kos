@@ -20,8 +20,10 @@
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
 
+/*edited by Isabel*/
 mword Scheduler::defaultEpochLength;
 mword Scheduler::schedMinGranularity;
+/*end edited by Isabel*/
 
 Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(this) {
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
