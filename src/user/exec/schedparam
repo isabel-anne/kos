@@ -3,4 +3,3 @@ Scheduler Parameters
 schedMinGranularity = 4
 
 defaultEpochLength = 20
-
