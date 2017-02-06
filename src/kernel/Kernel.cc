@@ -22,6 +22,7 @@
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
 #include "runtime/Scheduler.h"
+#include <stdlib.h>
 
 #include "main/UserMain.h"
 
