@@ -57,7 +57,7 @@ void kosMain() {
   }
 
   /*begin edited by Isabel*/
-  bool isNum = false, x = false;
+//  bool isNum = false, x = false;
   string sc = "";
 
   auto iter2 = kernelFS.find("schedparam");
@@ -78,12 +78,12 @@ void kosMain() {
         KOUT::out1(c);
         if(x == false)
         {
-            Scheduler::defaultEpochLength = (int)sc;
+            Scheduler::defaultEpochLength = (mword)sc;
               sc = "";
               //x = true;
         }
         else
-          Scheduler::schedMinGranularity = (int)sc;
+          Scheduler::schedMinGranularity = (mword)sc;
       }
       else
         KOUT::out1(c);
