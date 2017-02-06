@@ -38,8 +38,10 @@ exec/motb: .FORCE
 exec/schedparam: .FORCE
 	@echo creating $@
 	@mkdir -p exec
-	@echo "File FOUND schedparam printing stuff!!" >> $@
-	@echo -n "Build Date: " >> $@
+	@echo "Scheduler Parameters" >> $@
+	@echo -n "schedMinGranularity = 4" >> $@
+	@echo -n "defaultEpochLength = 20" >> $@
+	@echo >> $@
 
 echo:
 	@echo SRC: $(SRC)

@@ -1,2 +1,6 @@
-File FOUND schedparam printing stuff!!
-Build Date: 
+
+Scheduler Parameters
+
+schedMinGranularity  = 4
+
+defaultEpochLength = 20
