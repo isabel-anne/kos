@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -52,6 +52,22 @@ void kosMain() {
     }
     KOUT::outl();
   }
+
+  /*begin edited by Isabel*/
+  auto iter = kernelFS.find("schedparam");
+  if (iter == kernelFS.end()) {
+    KOUT::outl("motb information not found");
+  } else {
+    FileAccess f(iter->second);
+    for (;;) {
+      char c;
+      if (f.read(&c, 1) == 0) break;
+      KOUT::out1(c);
+    }
+    KOUT::outl();
+  }
+  /*end editted by Isabel*/
+
 #if TESTING_TIMER_TEST
   StdErr.print(" timer test, 3 secs...");
   for (int i = 0; i < 3; i++) {
