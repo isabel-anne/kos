@@ -23,6 +23,7 @@
 #include "devices/Keyboard.h"
 #include "runtime/Scheduler.h"
 #include <stdlib.h>
+#include <string>
 
 #include "main/UserMain.h"
 
@@ -56,6 +57,9 @@ void kosMain() {
   }
 
   /*begin edited by Isabel*/
+  bool isNum = false, x = false;
+  string sc = "";
+
   auto iter2 = kernelFS.find("schedparam");
   if (iter2 == kernelFS.end()) {
     KOUT::outl("schedparam information not found");
@@ -63,35 +67,35 @@ void kosMain() {
     FileAccess f(iter2->second);
     for (;;) {
       char c;
-      bool isNum = false, x = false;
+
       if (f.read(&c, 1) == 0) break;
       if(c >= '0' && c >= '9'){
         KOUT::out1(c);
-        isNum = true;
+        sc += c;
       }
-      else if((c < '0' || c > '9') && isNum == true)
+      else if((c < '0' || c > '9') && !sc.empty())//isNum == true)
       {
         KOUT::out1(c);
         if(x == false)
         {
-            Scheduler::defaultEpochLength = atoi((int)c);
-            isNum = false;
-            x = true;
+            Scheduler::defaultEpochLength = (int)sc;
+              sc = "";
+              //x = true;
         }
         else
-          Scheduler::schedMinGranularity = atoi((int)c);
+          Scheduler::schedMinGranularity = (int)sc;
       }
       else
         KOUT::out1(c);
       }
 //    KOUT::outl();
   }
-  Scheduler::defaultEpochLength = Scheduler::defaultEpochLength*(Machine::cyclesPerSecond/1000);
-  Scheduler::schedMinGranularity = Scheduler::schedMinGranularity*(Machine::cyclesPerSecond/1000);
-  KOUT::outl("cyclesPerSecond = %d", Machine::cyclesPerSecond);
-  KOUT::outl("schedMinGranularity = %d", )
-  KOUT::outl("EpochLength = %d",Scheduler::defaultEpochLength);
-  KOUT::outl("MinGranularity = %d", Scheduler::schedMinGranularity);
+  // Scheduler::defaultEpochLength = Scheduler::defaultEpochLength*(Machine::cyclesPerSecond/1000);
+  // Scheduler::schedMinGranularity = Scheduler::schedMinGranularity*(Machine::cyclesPerSecond/1000);
+  // KOUT::outl("cyclesPerSecond = %d", Machine::cyclesPerSecond);
+  // KOUT::outl("schedMinGranularity = %d", )
+  // KOUT::outl("EpochLength = %d",Scheduler::defaultEpochLength);
+  // KOUT::outl("MinGranularity = %d", Scheduler::schedMinGranularity);
 
   /*end editted by Isabel*/
 
