@@ -40,9 +40,9 @@ static void keybLoop() {
 
 void kosMain() {
   KOUT::outl("Welcome to KOS!", kendl);
-  auto iter = kernelFS.find("schedparam");
+  auto iter = kernelFS.find("motb");
   if (iter == kernelFS.end()) {
-    KOUT::outl("schedparam information not found");
+    KOUT::outl("motb information not found");
   } else {
     FileAccess f(iter->second);
     for (;;) {
@@ -54,18 +54,18 @@ void kosMain() {
   }
 
   /*begin edited by Isabel*/
-  // auto iter2 = kernelFS.find("schedparam");
-  // if (iter2 == kernelFS.end()) {
-  //   KOUT::outl("schedparam information not found");
-  // } else {
-  //   FileAccess f(iter2->second);
-  //   for (;;) {
-  //     char c;
-  //     if (f.read(&c, 1) == 0) break;
-  //     KOUT::out1(c);
-  //   }
-  //   KOUT::outl();
-  // }
+  auto iter2 = kernelFS.find("schedparam");
+  if (iter2 == kernelFS.end()) {
+    KOUT::outl("schedparam information not found");
+  } else {
+    FileAccess f(iter2->second);
+    for (;;) {
+      char c;
+      if (f.read(&c, 1) == 0) break;
+      KOUT::out1(c);
+    }
+    KOUT::outl();
+  }
   /*end editted by Isabel*/
 
 #if TESTING_TIMER_TEST
