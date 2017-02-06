@@ -21,6 +21,7 @@
 #include "world/Access.h"
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
+#include "runtime/Scheduler.h"
 
 #include "main/UserMain.h"
 
@@ -61,11 +62,36 @@ void kosMain() {
     FileAccess f(iter2->second);
     for (;;) {
       char c;
+      bool isNum = false, x = false;
       if (f.read(&c, 1) == 0) break;
-      KOUT::out1(c);
-    }
-    KOUT::outl();
+      if(c >= '0' && c >= '9'){
+        KOUT::out1(c);
+        isNum = true;
+      }
+      else if((c < '0' || c > '9') && isNum == true)
+      {
+        KOUT::out1(c);
+        if(x == false)
+        {
+            Scheduler::defaultEpochLength = atoi((int)c);
+            isNum = false;
+            x = true;
+        }
+        else
+          Scheduler::schedMinGranularity = atoi((int)c);
+      }
+      else
+        KOUT::out1(c);
+      }
+//    KOUT::outl();
   }
+  Scheduler::defaultEpochLength = Scheduler::defaultEpochLength*(Machine::cyclesPerSecond/1000);
+  Scheduler::schedMinGranularity = Scheduler::schedMinGranularity*(Machine::cyclesPerSecond/1000);
+  KOUT::outl("cyclesPerSecond = %d", Machine::cyclesPerSecond);
+  KOUT::outl("schedMinGranularity = %d", )
+  KOUT::outl("EpochLength = %d",Scheduler::defaultEpochLength);
+  KOUT::outl("MinGranularity = %d", Scheduler::schedMinGranularity);
+
   /*end editted by Isabel*/
 
 #if TESTING_TIMER_TEST
