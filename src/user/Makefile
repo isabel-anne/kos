@@ -39,7 +39,9 @@ exec/schedparam: .FORCE
 	@echo creating $@
 	@mkdir -p exec
 	@echo "Scheduler Parameters" >> $@
+	@echo >> $@
 	@echo "schedMinGranularity = 4" >> $@
+	@echo >> $@
 	@echo "defaultEpochLength = 20" >> $@
 	@echo >> $@
 
