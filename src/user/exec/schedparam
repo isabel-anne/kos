@@ -1,6 +1,6 @@
-
 Scheduler Parameters
 
-schedMinGranularity  = 4
+schedMinGranularity = 4
 
 defaultEpochLength = 20
+
