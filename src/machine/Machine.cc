@@ -38,6 +38,7 @@
 
 #include "machine/ACPI.h"
 
+#include <iostream>
 #include <list>
 #include <map>
 
