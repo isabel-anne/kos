@@ -41,7 +41,7 @@ exec/schedparam: .FORCE
 	@echo >> $@
 	@echo "Scheduler Parameters" >> $@
 	@echo >> $@
-	@echo -n "schedMinGranularity = 4" >> $@
+	@echo "schedMinGranularity = 4" >> $@
 	@echo >> $@
 	@echo "defaultEpochLength = 20" >> $@
 	@echo >> $@
