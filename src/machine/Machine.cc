@@ -90,7 +90,6 @@ static InterruptDescriptor idt[maxIDT]                __aligned(pagesize<1>());
 mword first = CPU::readTSC();
 Clock::wait(1000);
 mword Machine::cycles = CPU::readTSC() - first;
-
 /*end editedb by Isabel*/
 
 

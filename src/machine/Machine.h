@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -18,6 +18,7 @@
 #define _Machine_h_ 1
 
 #include "generic/basics.h"
+#include "kernel/Clock.h"
 
 class Scheduler;
 class Thread;
@@ -26,6 +27,9 @@ class Machine : public NoObject {
   friend void initGdb(mword); // initGdb calls setupIDT to redirect exception handlers
 
   static mword processorCount;
+  /*added by Isabel*/
+  static mword cycles;
+  /*end added by Isabel*/
 
   static void setupIDT(uint32_t, paddr, uint32_t = 0)  __section(".boot.text");
   static void setupIDTable()                           __section(".boot.text");
