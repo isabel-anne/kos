@@ -18,6 +18,7 @@
 #define _Machine_h_ 1
 
 #include "generic/basics.h"
+#include <kernel/Clock.h>
 
 class Scheduler;
 class Thread;
