@@ -38,8 +38,8 @@ exec/motb: .FORCE
 exec/schedparam: .FORCE
 	@echo creating $@
 	@mkdir -p exec
-	@echo "Scheduler Parameters" >> $@
-	@echo "schedMinGranularity = 4" >> $@
+	@echo -n "Scheduler Parameters" >> $@
+	@echo -n "schedMinGranularity = 4" >> $@
 	@echo -n "defaultEpochLength = 20" >> $@
 	@echo >> $@
 
