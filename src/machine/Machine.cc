@@ -47,6 +47,7 @@ extern void initCdiDrivers();
 extern bool findCdiDriver(const PCIDevice&);
 extern void lwip_init_tcpip();
 extern void kosMain();
+mword Machine::cycles;
 
 // check various assumptions about data type sizes
 static_assert(sizeof(uint64_t) == sizeof(mword), "mword != uint64_t" );
@@ -405,7 +406,8 @@ apDone:
   /*edited by Isabel*/
   mword first = CPU::readTSC();
   Clock::wait(1000);
-  mword Machine::cycles = CPU::readTSC() - first;
+  mword second = CPU::readTSC();
+  cycles = second - first;
   /*end editedb by Isabel*/
 }
 
