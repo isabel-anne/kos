@@ -87,11 +87,7 @@ static PIT pit;
 static const unsigned int maxIDT = 256;
 static InterruptDescriptor idt[maxIDT]                __aligned(pagesize<1>());
 
-/*edited by Isabel*/
-mword first = CPU::readTSC();
-Clock::wait(1000);
-mword Machine::cycles = CPU::readTSC() - first;
-/*end editedb by Isabel*/
+
 
 
 // CPU information
@@ -405,6 +401,12 @@ apDone:
   // start irq thread after cdi init -> avoid interference from device irqs
   DBG::outl(DBG::Boot, "Creating IRQ thread...");
   Thread::create()->setPriority(topPriority)->setAffinity(processorTable[0].scheduler)->start((ptr_t)asyncIrqLoop);
+
+  /*edited by Isabel*/
+  mword first = CPU::readTSC();
+  Clock::wait(1000);
+  mword Machine::cycles = CPU::readTSC() - first;
+  /*end editedb by Isabel*/
 }
 
 void Machine::bootCleanup() {
