@@ -25,15 +25,15 @@ $(EXE): exec/%: %.o ../ulib/libKOS.a
 	$(CXX) -L../ulib -o $@ $<
 #	strip $@
 
-exec/motb: .FORCE
-	@echo creating $@
-	@mkdir -p exec
-	@echo > $@
-	@echo "Hello everybody! So glad to see you..." >> $@
-	@echo >> $@
-	@echo -n "Build Date: " >> $@
-	@date >> $@
-	@echo >> $@
+# exec/motb: .FORCE
+# 	@echo creating $@
+# 	@mkdir -p exec
+# 	@echo > $@
+# 	@echo "Hello everybody! So glad to see you..." >> $@
+# 	@echo >> $@
+# 	@echo -n "Build Date: " >> $@
+# 	@date >> $@
+# 	@echo >> $@
 
 exec/schedparam: .FORCE
 	@echo creating $@

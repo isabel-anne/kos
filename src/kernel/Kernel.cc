@@ -70,7 +70,7 @@ void kosMain() {
       char c;
 
       if (f.read(&c, 1) == 0) break;
-      if(c >= '0' && c >= '9'){
+      if(c >= '0' && c <= '9'){
         KOUT::out1(c);
         sc += c;
       }
