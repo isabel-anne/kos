@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 #include "runtime/Stack.h"
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
+#include "generic/Tree.h"
 
 Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(this) {
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
@@ -37,6 +38,8 @@ static inline void unlock(BasicLock &l, Args&... a) {
   unlock(a...);
 }
 
+int defaultEpoch = 20;
+int minimumGranularity = 4;
 // very simple N-class prio scheduling!
 template<typename... Args>
 inline void Scheduler::switchThread(Scheduler* target, Args&... a) {
