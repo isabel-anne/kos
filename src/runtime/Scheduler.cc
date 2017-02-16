@@ -19,7 +19,6 @@
 #include "runtime/Stack.h"
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
-#include "generic/Tree.h"
 
 Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(this) {
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
