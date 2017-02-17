@@ -26,6 +26,7 @@
 
 AddressSpace kernelSpace(true); // AddressSpace.h
 volatile mword Clock::tick;     // Clock.h
+//added for A2
 static int defaultEpochLength = 20;
 static int schedMinGranularity = 4;
 
@@ -69,10 +70,10 @@ void kosMain() {
 #endif
   Thread::create()->start((ptr_t)UserMain);
 #if TESTING_PING_LOOP
-  for (;;) {
-    Timeout::sleep(Clock::now() + 1000);
-    KOUT::outl("...ping...");
-  }
+  // for (;;) {
+  //   Timeout::sleep(Clock::now() + 1000);
+  //   KOUT::outl("...ping...");
+  // }
 #endif
 }
 
