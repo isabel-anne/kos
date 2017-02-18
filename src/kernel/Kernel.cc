@@ -21,14 +21,14 @@
 #include "world/Access.h"
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
+#include "devices/RTC.h"
+#include <stdlb.h>//added for a2
+#include "runtime/Scheduler.h"
 
 #include "main/UserMain.h"
 
 AddressSpace kernelSpace(true); // AddressSpace.h
 volatile mword Clock::tick;     // Clock.h
-//added for A2
-static int defaultEpochLength = 20;
-static int schedMinGranularity = 4;
 
 extern Keyboard keyboard;
 
@@ -55,6 +55,52 @@ void kosMain() {
     }
     KOUT::outl();
   }
+//added for a2
+  string s = "";
+  bool x = false;
+
+  iter = kernelFS.find("schedparam");
+  if (iter == kernelFS.end()) {
+      KOUT::outl("schedparam information not found");
+  } else {
+
+      FileAccess f(iter->second);
+      for (;;) {
+          char c;
+          if (f.read(&c, 1) == 0) break;
+
+          if(c >= 48 && c <= 57) // 0-9 ASCII value
+          {  //if it is a number add it to the end of string
+              KOUT::out1(c);
+              s += c;
+          }
+          else{// else if ((c < 48 || c > 57) && !s.empty()) //if the number exists and has been read
+          // {
+          //     KOUT::out1(c);
+              //if x == false parse to int and store defaultEpochLength
+              //if x == true parse to int and store in schedMinGranularity
+              if(x == false){
+                  Scheduler::defaultEpochLength = atoi(s.c_str());
+                  tempString = "";
+                  x = true;
+              }
+              else{
+                  Scheduler::schedMinGranularity = atoi(s.c_str());
+              }
+          // else
+              KOUT::out1(c);
+      }
+        //KOUT::outl();
+     }
+     Scheduler::defaultEpochLength = Scheduler::defaultEpochLength * (Machine::cps/1000);
+   Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
+
+   KOUT::out1("cps = ", Machine::cps);
+   KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength);
+   KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity);
+
+//end added for a2
+
 #if TESTING_TIMER_TEST
   StdErr.print(" timer test, 3 secs...");
   for (int i = 0; i < 3; i++) {

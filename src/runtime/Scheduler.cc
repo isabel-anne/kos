@@ -31,14 +31,17 @@ Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(th
 
 static inline void unlock() {}
 
+//added for a2
+mword Scheduler::defaultEpochLength;
+mword Scheduler::schedMinGranularity;
+//end added for a2
+
 template<typename... Args>
 static inline void unlock(BasicLock &l, Args&... a) {
   l.release();
   unlock(a...);
 }
 
-int defaultEpoch = 20;
-int minimumGranularity = 4;
 // very simple N-class prio scheduling!
 template<typename... Args>
 inline void Scheduler::switchThread(Scheduler* target, Args&... a) {

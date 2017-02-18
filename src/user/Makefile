@@ -12,6 +12,7 @@ OBJ=$(SRC:%.cc=%.o)
 EXE=$(SRC:%.cc=exec/%)
 
 all: $(EXE) exec/motb
+all: $(EXE) exec/schedparam #added for a2
 
 .PHONY: .FORCE
 
@@ -32,6 +33,17 @@ exec/motb: .FORCE
 	@echo >> $@
 	@echo -n "Build Date: " >> $@
 	@date >> $@
+	@echo >> $@
+
+exec/schedparam: .FORCE
+	@echo creating $@
+	@mkdir -p exec
+	@echo > $@
+	@echo "Scheduler Parameters" >> $@
+	@echo >> $@
+	@echo "defaultEpochLength 20" >> $@
+	@echo >> $@
+	@echo "schedMinGranularity 4" >> $@
 	@echo >> $@
 
 echo:

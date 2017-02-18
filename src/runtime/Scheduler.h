@@ -1,5 +1,5 @@
 /******************************************************************************
-    Copyright © 2012-2015 Martin Karsten
+    Copyright ï¿½ 2012-2015 Martin Karsten
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -19,6 +19,7 @@
 
 #include "generic/EmbeddedContainers.h"
 #include "runtime/Runtime.h"
+//#include "generic/Tree.h"//added for a2
 
 class Thread;
 
@@ -28,7 +29,7 @@ class Scheduler {
 
   // very simple N-class prio scheduling
   BasicLock readyLock;
-  volatile mword readyCount; 
+  volatile mword readyCount;
   EmbeddedList<Thread> readyQueue[maxPriority];
   volatile mword preemption;
   volatile mword resumption;
@@ -52,5 +53,9 @@ public:
   void suspend(BasicLock& lk1, BasicLock& lk2);
   void terminate() __noreturn;
 };
+
+//added for a2
+static mword defaultEpochLength;
+static mword schedMinGranularity;
 
 #endif /* _Scheduler_h_ */
