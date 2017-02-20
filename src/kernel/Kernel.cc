@@ -69,12 +69,12 @@ void kosMain() {
       for (;;) {
           char c;
           if (f.read(&c, 1) == 0) break;
-          if(c >= 48 && c <= 57) // 0-9 ASCII value
+          if(c >= '0' && c <= '9') // 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
           }
-          else if ((c < 48 || c > 57) && !s.empty()) //if the number exists and has been read
+          else if ((c < '0' || c > '9') && !s.empty()) //if the number exists and has been read
           {
                KOUT::out1(c);
               //if x == false parse to int and store defaultEpochLength
