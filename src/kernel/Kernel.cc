@@ -22,7 +22,7 @@
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
 #include "devices/RTC.h"
-#include <stdlib.h>//added for a2
+#include <stdlb.h>//added for a2
 #include "runtime/Scheduler.h"
 
 #include "main/UserMain.h"
@@ -81,7 +81,7 @@ void kosMain() {
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
                   Scheduler::defaultEpochLength = atoi(s.c_str());
-                  tempString = "";
+                  s = "";
                   x = true;
               }
               else{
@@ -98,7 +98,8 @@ void kosMain() {
    KOUT::out1("cps = ", Machine::cps);
    KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength);
    KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity);
-
+}
+}
 //end added for a2
 
 #if TESTING_TIMER_TEST
