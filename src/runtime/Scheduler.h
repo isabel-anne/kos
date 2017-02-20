@@ -45,6 +45,8 @@ class Scheduler {
   const Scheduler& operator=(const Scheduler&) = delete; // no assignment
 
 public:
+  static mword defaultEpochLength; //added for a2
+  static mword schedMinGranularity; //added for a2
   Scheduler();
   void setPartner(Scheduler& s) { partner = &s; }
   static void resume(Thread& t);
@@ -53,9 +55,5 @@ public:
   void suspend(BasicLock& lk1, BasicLock& lk2);
   void terminate() __noreturn;
 };
-
-//added for a2
-static mword defaultEpochLength;
-static mword schedMinGranularity;
 
 #endif /* _Scheduler_h_ */

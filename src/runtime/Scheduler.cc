@@ -20,6 +20,11 @@
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
 
+//added for a2
+mword Scheduler::defaultEpochLength;
+mword Scheduler::schedMinGranularity;
+//end added for a2
+
 Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(this) {
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
   idleThread->setAffinity(this)->setPriority(idlePriority);
@@ -30,11 +35,6 @@ Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(th
 }
 
 static inline void unlock() {}
-
-//added for a2
-mword Scheduler::defaultEpochLength;
-mword Scheduler::schedMinGranularity;
-//end added for a2
 
 template<typename... Args>
 static inline void unlock(BasicLock &l, Args&... a) {
