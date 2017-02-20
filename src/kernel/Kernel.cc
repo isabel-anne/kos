@@ -85,7 +85,7 @@ void kosMain() {
                   x = true;
               }
               else
-                Scheduler::schedMinGranularity = 4//(mword)s.c_str();
+                Scheduler::schedMinGranularity = 4;//(mword)s.c_str();
            }
           else
               KOUT::out1(c);
