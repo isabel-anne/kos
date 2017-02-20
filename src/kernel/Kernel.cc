@@ -22,8 +22,9 @@
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
 #include "devices/RTC.h"
-#include <stdlib.h>//added for a2
+#include <stdlib.h> //added for a2
 #include "runtime/Scheduler.h"
+#include <string>
 
 #include "main/UserMain.h"
 
@@ -55,6 +56,7 @@ void kosMain() {
     }
     KOUT::outl();
   }
+
 //added for a2
   string s = "";
   bool x = false;
@@ -63,43 +65,38 @@ void kosMain() {
   if (iter == kernelFS.end()) {
       KOUT::outl("schedparam information not found");
   } else {
-
       FileAccess f(iter->second);
       for (;;) {
           char c;
           if (f.read(&c, 1) == 0) break;
-
           if(c >= 48 && c <= 57) // 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
           }
-          else{// else if ((c < 48 || c > 57) && !s.empty()) //if the number exists and has been read
-          // {
-          //     KOUT::out1(c);
+          else if ((c < 48 || c > 57) && !s.empty()) //if the number exists and has been read
+          {
+               KOUT::out1(c);
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  Scheduler::defaultEpochLength = atoi(s.c_str());
+                  Scheduler::defaultEpochLength = (mword)s.c_str();
                   s = "";
                   x = true;
               }
-              else{
-                  Scheduler::schedMinGranularity = atoi(s.c_str());
-              }
-          // else
+              else
+                Scheduler::schedMinGranularity = (mword)s.c_str();
+           }
+          else
               KOUT::out1(c);
       }
-        //KOUT::outl();
      }
      Scheduler::defaultEpochLength = Scheduler::defaultEpochLength * (Machine::cps/1000);
-   Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
-
-   KOUT::out1("cps = ", Machine::cps);
-   KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength);
-   KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity);
-}
-}
+     Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
+     KOUT::out1("Schedule Parameters afte Parse\n");
+     KOUT::out1("cps = ", Machine::cps);
+     KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength);
+     KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity);
 //end added for a2
 
 #if TESTING_TIMER_TEST
