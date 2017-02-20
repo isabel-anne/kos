@@ -91,8 +91,8 @@ void kosMain() {
               KOUT::out1(c);
       }
      }
-     Scheduler::defaultEpochLength = Scheduler::defaultEpochLength / (Machine::cps);  //1000);
-     Scheduler::schedMinGranularity = Scheduler::schedMinGranularity / (Machine::cps);
+    //  Scheduler::defaultEpochLength = Scheduler::defaultEpochLength * (Machine::cps/1000);
+    //  Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
      KOUT::out1("Schedule Parameters afte Parse\n");
      KOUT::out1("cps = ", Machine::cps, "\n");
      KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength, "\n");
