@@ -22,7 +22,7 @@
 #include "machine/Machine.h"
 #include "devices/Keyboard.h"
 #include "devices/RTC.h"
-#include <stdlb.h>//added for a2
+#include <stdlib.h>//added for a2
 #include "runtime/Scheduler.h"
 
 #include "main/UserMain.h"
