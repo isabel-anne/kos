@@ -94,9 +94,9 @@ void kosMain() {
      Scheduler::defaultEpochLength = Scheduler::defaultEpochLength * (Machine::cps/1000);
      Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
      KOUT::out1("Schedule Parameters afte Parse\n");
-     KOUT::out1("cps = ", Machine::cps);
-     KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength);
-     KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity);
+     KOUT::out1("cps = ", Machine::cps, "\n");
+     KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength, "\n");
+     KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity, "\n");
 //end added for a2
 
 #if TESTING_TIMER_TEST
