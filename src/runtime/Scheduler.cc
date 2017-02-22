@@ -187,10 +187,10 @@ void Scheduler::preempt() {               // IRQs disabled, lock count inflated
     if(target != this && target){
       switchThread(target);
     }
-    Thread *current = Runtime::getCurrThread();
-    if(switchThread(current){
-      switchThread(this);
-    }
+    // Thread *current = Runtime::getCurrThread();
+    // if(switchThread(current){
+    //   switchThread(this);
+    // }
   // #else /* simple load balancing */
   //   if (!target) target = (partner->readyCount + 2 < readyCount) ? partner : this;
   // #endif
