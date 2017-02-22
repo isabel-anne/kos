@@ -24,7 +24,6 @@
 #include "devices/RTC.h"
 #include <stdlib.h> //added for a2
 #include "runtime/Scheduler.h"
-#include "runtime/Thead.h"
 #include <string>
 #include <ctype.h>
 

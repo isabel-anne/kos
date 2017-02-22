@@ -86,7 +86,7 @@ public:
         if (!cur) cur = root;
         while (cur) {
             if (n < sz(cur->l)) cur = cur->l;
-            else if (n > sz(cur->l)) n -= sz(cur->l)  1, cur = cur->r;
+            else if (n > sz(cur->l)) n -= sz(cur->l) + 1, cur = cur->r;
             else break;
         } return cur; }
 
@@ -112,7 +112,7 @@ private:
 
     void augment(node *n) {
         if (!n) return;
-        n->size = 1  sz(n->l) + sz(n->r);
+        n->size = 1 + sz(n->l) + sz(n->r);
         int hl = height(n->l);
         int hr = height(n->r);
         int m = hl>hr ? hl : hr;
