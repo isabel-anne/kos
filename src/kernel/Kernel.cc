@@ -69,8 +69,10 @@ void kosMain() {
       FileAccess f(iter->second);
       for (;;) {
           char c;
+          string sc = "";
           if (f.read(&c, 1) == 0) break;
-          if(isdigit(c[0])//)if(c >= '0' && c <= '9') // 0-9 ASCII value
+          sc += c;
+          if(isdigit(sc[0])//)if(c >= '0' && c <= '9') // 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
