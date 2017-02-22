@@ -33,7 +33,8 @@ class Thread : public EmbeddedList<Thread>::Link {
   size_t stackSize;         // size of allocated memory
 
   mword vRuntime;           //added for a2
-  bool oldThread;           //added for a2         
+  bool oldThread;           //added for a2
+  bool suspended;           //added for a2
   mword priority;           // scheduling priority
   bool affinity;            // stick with scheduler
   Scheduler* nextScheduler; // resume on same core (for now)
