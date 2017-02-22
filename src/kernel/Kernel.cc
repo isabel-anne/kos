@@ -69,15 +69,13 @@ void kosMain() {
       FileAccess f(iter->second);
       for (;;) {
           char c;
-          string sc = "";
           if (f.read(&c, 1) == 0) break;
-          sc += c;
-          if(isdigit(c))//)if(c >= '0' && c <= '9') // 0-9 ASCII value
+          if(isdigit(c))// 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
           }
-          else if ((c < '0' || c > '9') && !s.empty()) //if the number exists and has been read
+        else if(!isdigit(c) && !s.empty())//  else if ((c < '0' || c > '9') && !s.empty()) //if the number exists and has been read
           {
                KOUT::out1(c);
               //if x == false parse to int and store defaultEpochLength
