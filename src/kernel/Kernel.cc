@@ -59,6 +59,8 @@ void kosMain() {
   }
 
 //added for a2
+  Scheduler *targer = NULL;
+
   string s = "";
   bool x = false;
 
@@ -81,13 +83,13 @@ void kosMain() {
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  Scheduler::setEpochLength(atoi(s.c_str()));
+                  target.setEpochLength(atoi(s.c_str()));
                   s = "";
                   x = true;
               }
               else
               {
-                Scheduler::setMinGranularity(atoi(s.c_str()));
+                  taget.setMinGranularity(atoi(s.c_str()));
               }
            }
           else
@@ -102,7 +104,6 @@ void kosMain() {
      KOUT::out1("epochLength = ",  Scheduler::epochLength, "\n");
      KOUT::out1("minGranularity = ",  Scheduler::minGranularity, "\n");
 
-     Scheduler *targer = NULL;
 
      for(int i = 0; i < Machine::getProcessorCount(); i++)
      {
