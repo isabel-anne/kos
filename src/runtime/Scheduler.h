@@ -19,13 +19,16 @@
 
 #include "generic/EmbeddedContainers.h"
 #include "runtime/Runtime.h"
-//#include "generic/Tree.h"//added for a2
+#include "generic/AVL_Tree.h"//added for a2
 
 class Thread;
+class ThreadNode; //added for a2
 
 class Scheduler {
   friend void Runtime::idleLoop(Scheduler*);
   bufptr_t idleStack[minimumStack];
+
+  Tree<ThreadNode> *readyTree; //added for a2
 
   // very simple N-class prio scheduling
   BasicLock readyLock;

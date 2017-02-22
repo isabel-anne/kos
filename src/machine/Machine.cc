@@ -88,6 +88,7 @@ static const unsigned int maxIDT = 256;
 static InterruptDescriptor idt[maxIDT]                __aligned(pagesize<1>());
 
 // CPU information
+mword Machine::tps = 0; //added for a2
 mword Machine::processorCount = 0;
 static Processor* processorTable = nullptr;
 static Scheduler* schedulerTable = nullptr;
@@ -101,6 +102,12 @@ static void tipiReceiver()    __section(".boot.text");
 static void tipiReceiver() {
   KERR::out1(" TIPI ");
   tipiTest = true;
+}
+
+//added for a2
+Scheduler *Machine::getScheduler(mword idx)
+{
+  return processorTable[idx].scheduler;
 }
 
 // IRQ handling
@@ -398,12 +405,6 @@ apDone:
   // start irq thread after cdi init -> avoid interference from device irqs
   DBG::outl(DBG::Boot, "Creating IRQ thread...");
   Thread::create()->setPriority(topPriority)->setAffinity(processorTable[0].scheduler)->start((ptr_t)asyncIrqLoop);
-//added for a2
-  mword start = CPU::readTSC();
-  Clock::wait(1000);
-  mword end = CPU::readTSC();
-  cps = end - start;
-//added for a2
 
 }
 

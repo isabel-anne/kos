@@ -19,27 +19,54 @@
 #include "runtime/Stack.h"
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
-#include "generic/Tree.h" //added for a2
-
+#include "world/Access.h"
+#include "machine/Machine.h"
+#include "devices/Keyboard.h"
 //added for a2
-mword Scheduler::defaultEpochLength;
-mword Scheduler::schedMinGranularity;
+// mword Scheduler::defaultEpochLength;
+// mword Scheduler::schedMinGranularity;
+
+// Class for tree node
+class ThreadNode{
+	friend class Scheduler;
+	Thread *th;
+
+	public:
+		bool operator < (ThreadNode other) const {
+			return th->priority < other.th->priority;
+		}
+		bool operator == (ThreadNode other) const {
+			return th->priority == other.th->priority;
+		}
+		bool operator > (ThreadNode other) const {
+			return th->priority > other.th->priority;
+		}
+
+	//this is how we want to do it
+	ThreadNode(Thread *t){
+		th = t;
+	}
+};
 //end added for a2
 
 Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(this) {
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
   idleThread->setAffinity(this)->setPriority(idlePriority);
   // use low-level routines, since runtime context might not exist
-
-//added for a2
-  Scheduler::schedMinGranularity = 0;
-  Scheduler::defaultEpochLength = 0;
-//  Scheduler::min
-
-
   idleThread->stackPointer = stackInit(idleThread->stackPointer, &Runtime::getDefaultMemoryContext(), (ptr_t)Runtime::idleLoop, this, nullptr, nullptr);
-  readyQueue[idlePriority].push_back(*idleThread);
+
+  //A2 Initialize the tree that contains the threads waiting to be served
+  readyTree = new Tree<ThreadNode>();
+  //Add a thread to the tree. anyThreadClassObject is an object of ThreadClass
+  readyTree->insert(*(new ThreadNode(*idleThread)));
+  //  readyQueue[idlePriority].push_back(*idleThread);
   readyCount += 1;
+
+  //added for a2
+    schedMinGranularity = 200;//Scheduler::schedMinGranularity = 200;
+    defaultEpochLength = 1000;//Scheduler::defaultEpochLength = 1000;
+    epochLength = defaultEpochLength;
+    minvRuntime = 0;
 }
 
 static inline void unlock() {}
@@ -57,13 +84,21 @@ inline void Scheduler::switchThread(Scheduler* target, Args&... a) {
   CHECK_LOCK_MIN(sizeof...(Args));
   Thread* nextThread;
   readyLock.acquire();
-  for (mword i = 0; i < (target ? idlePriority : maxPriority); i += 1) {
-    if (!readyQueue[i].empty()) {
-      nextThread = readyQueue[i].pop_front();
+
+  //added for a2
+  if(!readyTree->empty()){
+      nextThread = readyTree->popMinNode()->th;
       readyCount -= 1;
       goto threadFound;
-    }
   }
+
+  // for (mword i = 0; i < (target ? idlePriority : maxPriority); i += 1) {
+  //   if (!readyQueue[i].empty()) {
+  //     nextThread = readyQueue[i].pop_front();
+  //     readyCount -= 1;
+  //     goto threadFound;
+  //   }
+  // }
   readyLock.release();
   GENASSERT0(target);
   GENASSERT0(!sizeof...(Args));
@@ -110,9 +145,27 @@ extern "C" void invokeThread(Thread* prevThread, Runtime::MemoryContext* ctx, fu
 void Scheduler::enqueue(Thread& t) {
   GENASSERT1(t.priority < maxPriority, t.priority);
   readyLock.acquire();
-  readyQueue[t.priority].push_back(t);
+  //added for a2
+  readyTree->insert(*(new ThreadNode(&t)));
+//  readyQueue[t.priority].push_back(t);
   bool wake = (readyCount == 0);
   readyCount += 1;
+
+  //added for a2
+  if(t.suspended)
+  {
+    t.suspended = false;
+    t.vRuntime += minvRuntime;
+  }
+
+  if(!(t.oldThread))
+  {
+    t.vRuntime = minvRuntime;
+    t.oldThread = true;
+    if(epochLength < (schedMinGranularity*readyCount))
+        epochLength = schedMinGranularity*readyCount;
+  }
+
   readyLock.release();
   Runtime::debugS("Thread ", FmtHex(&t), " queued on ", FmtHex(this));
   if (wake) Runtime::wakeUp(this);
@@ -125,25 +178,44 @@ void Scheduler::resume(Thread& t) {
 }
 
 void Scheduler::preempt() {               // IRQs disabled, lock count inflated
-#if TESTING_NEVER_MIGRATE
-  switchThread(this);
-#else /* migration enabled */
+// #if TESTING_NEVER_MIGRATE
+//   switchThread(this);
+// #else /* migration enabled */
   Scheduler* target = Runtime::getCurrThread()->getAffinity();
-#if TESTING_ALWAYS_MIGRATE
-  if (!target) target = partner;
-#else /* simple load balancing */
-  if (!target) target = (partner->readyCount + 2 < readyCount) ? partner : this;
-#endif
-  switchThread(target);
-#endif
+// #if TESTING_ALWAYS_MIGRATE
+//  if (!target) target = partner;
+  if(target != this && target){
+    switchThread(target);
+  }
+
+  if(switchThread(Runtime::getCurrThread())){
+    switchThread(this);
+  }
+// #else /* simple load balancing */
+//   if (!target) target = (partner->readyCount + 2 < readyCount) ? partner : this;
+// #endif
+//   switchThread(target);
+// #endif
 }
 
 void Scheduler::suspend(BasicLock& lk) {
+  Thread *cThread = Runtime::getCurrThread();
+  if(!readyTree->empty())
+  {
+      cThread->suspended = true;
+      cThread->vRuntime -= readyTree->readMinNode()->th->vRuntime;
+  }
   Runtime::FakeLock fl;
   switchThread(nullptr, lk);
 }
 
 void Scheduler::suspend(BasicLock& lk1, BasicLock& lk2) {
+  Thread *cThread = Runtime::getCurrThread();
+  if(!readyTree->empty())
+  {
+      cThread->suspended = true;
+      cThread->vRuntime -= readyTree->readMinNode()->th->vRuntime;
+  }
   Runtime::FakeLock fl;
   switchThread(nullptr, lk1, lk2);
 }

@@ -1,4 +1,3 @@
-
 // AVL-tree implementation
 // source: https://github.com/SuprDewd/CompetitiveProgramming/blob/master/code/data-structures/avl_tree.cpp
 // note that the code on the github is very unreadable
@@ -6,19 +5,11 @@
 // additions of the min node functions
 // and making the code more readable.
 
+
 // This code is by a student who was enrolled in CPSC 457 in Fall 2015
 
-//added for a2
-#ifndef TREE
-#define TREE
-
-#include <assert.h>
-#include "ThreadNode.h"
-
-using namespace std;
-//end added for a2
-
-template <class T> class Tree {
+template <class T>
+class Tree {
 public:
     struct node {
         T item; node *p, *l, *r;
@@ -148,12 +139,3 @@ private:
                 n = n->p; }
             n = n->p; } }
 };
-
-// //Declare a tree
-// Tree<ThreadNode> *readyTree;
-//
-// //Initialize the tree that contains the threads waiting to be served
-// readyTree = new Tree<ThreadNode>();
-//
-// //Add a thread to the tree. anyThreadClassObject is an object of ThreadClass
-// readyTree->insert(*(new ThreadNode(*anyThreadClassObject)));

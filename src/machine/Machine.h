@@ -26,6 +26,7 @@ class Machine : public NoObject {
   friend void initGdb(mword); // initGdb calls setupIDT to redirect exception handlers
 
   static mword processorCount;
+  static mword tps; //ticks per second added for a2
 
   static void setupIDT(uint32_t, paddr, uint32_t = 0)  __section(".boot.text");
   static void setupIDTable()                           __section(".boot.text");
@@ -41,7 +42,10 @@ public:
   static void initAP(mword idx)                        __section(".boot.text");
   static void initBSP(mword mag, vaddr mb, mword idx)  __section(".boot.text");
   static void bootMain();
-  static mword cps; //added for a2
+
+  //added for a2
+  static mword gettps(); 
+  static Scheduler *getScheduler(mword idx);
 
   static mword getProcessorCount() { return processorCount; }
   static void setAffinity(Thread& t, mword idx);

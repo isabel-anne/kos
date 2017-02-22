@@ -82,26 +82,38 @@ void kosMain() {
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  Scheduler::defaultEpochLength = atoi(s.c_str());
+                  epochLength = atoi(s.c_str());
                   s = "";
                   x = true;
               }
               else
               {
-                Scheduler::schedMinGranularity = atoi(s.c_str());
+                minGranularity = atoi(s.c_str());
               }
            }
           else
               KOUT::out1(c);
       }
-     }
-     Scheduler::defaultEpochLength = Scheduler::defaultEpochLength * (Machine::cps/1000);
-     Scheduler::schedMinGranularity = Scheduler::schedMinGranularity * (Machine::cps/1000);
+    }
+    //convert sched params from milliseconds to ticks per cycle
+     epochLength *= (Machine::tps/1000.0);
+     minGranularity *= Machine::tps/1000.0);
      KOUT::out1("Schedule Parameters afte Parse\n");
-     KOUT::out1("cps = ", Machine::cps, "\n");
-     KOUT::out1("defaultEpochLength = ", Scheduler::defaultEpochLength, "\n");
-     KOUT::out1("schedMinGranularity = ", Scheduler::schedMinGranularity, "\n");
+     KOUT::out1("tps (ticks per second) = ", Machine::tps, "\n");
+     KOUT::out1("epochLength = ", epochLength, "\n");
+     KOUT::out1("minGranularity = ", minGranularity, "\n");
+
+     for(int i = 0; i < getProcessorCount(); i++)
+     {
+       target = Machine::getScheduler(i);
+       target -> setMinGranularity(minGranularity);
+       target -> setEpochLength(epochLength);
+     }
+
 //end added for a2
+
+
+
 
 #if TESTING_TIMER_TEST
   StdErr.print(" timer test, 3 secs...");
