@@ -37,6 +37,13 @@ class Scheduler {
   volatile mword preemption;
   volatile mword resumption;
 
+  //added for a2
+  mword epochLength;
+  mword minvRuntime;
+  static mword defaultEpochLength;
+  static mword schedMinGranularity;
+  //end added for a2
+
   Scheduler* partner;
 
   template<typename... Args>
@@ -49,10 +56,9 @@ class Scheduler {
 
 public:
   //added for a2
-  mword epochLength;
-  mword minvRuntime;
-  static mword defaultEpochLength;
-  static mword schedMinGranularity;
+  void setMinGranularity(int x) {schedMinGranularity = x;}
+  void setEpochLength(int y){ epochLength = y;}
+  void setDefaultEpoch(int z) {defaultEpochLength = z;}
   //end added for a2
   Scheduler();
   void setPartner(Scheduler& s) { partner = &s; }

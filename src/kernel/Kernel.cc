@@ -95,14 +95,16 @@ void kosMain() {
       }
     }
     //convert sched params from milliseconds to ticks per cycle
-     epochLength *= (Machine::tps/1000.0);
-     minGranularity *= Machine::tps/1000.0);
+     Scheduler::epochLength *= (Machine::tps/1000.0);
+     Scheduler::schedMinGranularity *= Machine::tps/1000.0);
      KOUT::out1("Schedule Parameters afte Parse\n");
-     KOUT::out1("tps (ticks per second) = ", Machine::tps, "\n");
-     KOUT::out1("epochLength = ", epochLength, "\n");
-     KOUT::out1("minGranularity = ", minGranularity, "\n");
+     KOUT::out1("tps (ticks per second) = ", Machine::gettps(), "\n");
+     KOUT::out1("epochLength = ",  Scheduler::epochLength, "\n");
+     KOUT::out1("minGranularity = ",  Scheduler::minGranularity, "\n");
 
-     for(int i = 0; i < getProcessorCount(); i++)
+     Scheduler *targer = NULL;
+
+     for(int i = 0; i < Machine::getProcessorCount(); i++)
      {
        target = Machine::getScheduler(i);
        target -> setMinGranularity(minGranularity);
@@ -110,9 +112,6 @@ void kosMain() {
      }
 
 //end added for a2
-
-
-
 
 #if TESTING_TIMER_TEST
   StdErr.print(" timer test, 3 secs...");
