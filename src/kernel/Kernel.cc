@@ -112,8 +112,8 @@ void kosMain() {
      for(int i = 0; i < Machine::getProcessorCount(); i++)
      {
        target = Machine::getScheduler(i);
-       target -> setMinGranularity(minGranularity);
-       target -> setEpochLength(epochLength);
+       target -> setMinGranularity(tempGran*(Machine::gettps()/1000.0));
+       target -> setEpochLength(tempEpoch*(Machine::gettps()/1000.0));
      }
 
 //end added for a2
