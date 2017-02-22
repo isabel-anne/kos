@@ -443,6 +443,13 @@ void Machine::bootCleanup() {
 void Machine::bootMain() {
   Machine::initBSP2();
   Machine::bootCleanup();
+
+    mword a = CPU::readTSC();
+    Timeout::sleep(1000);  
+    mword b = CPU::readTSC();
+    tps = b - a;
+
+
   Thread::create()->start((ptr_t)kosMain);
   LocalProcessor::getScheduler()->terminate(); // explicitly terminate boot thread
 }

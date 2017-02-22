@@ -162,8 +162,8 @@ void Scheduler::enqueue(Thread& t) {
   {
     t.vRuntime = minvRuntime;
     t.oldThread = true;
-    if(epochLength < (schedMinGranularity*readyCount))
-        epochLength = schedMinGranularity*readyCount;
+    if(target->epochLength < (target->schedMinGranularity*readyCount))
+        target->epochLength = target->schedMinGranularity*readyCount;
   }
 
   readyLock.release();

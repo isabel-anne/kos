@@ -44,7 +44,7 @@ public:
   static void bootMain();
 
   //added for a2
-  static mword gettps(); 
+  static mword gettps() {return tps;} 
   static Scheduler *getScheduler(mword idx);
 
   static mword getProcessorCount() { return processorCount; }
