@@ -81,15 +81,15 @@ void kosMain() {
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  KOUT::outl("if(x==false)\ns == ", s);
-                  Scheduler::defaultEpochLength = 20;//(mword)s.c_str();
+            //      KOUT::outl("if(x==false)\ns == ", s);
+                  Scheduler::defaultEpochLength = atoi(s.c_str());//20;//(mword)s.c_str();
                   s = "";
                   x = true;
               }
               else
               {
-                KOUT::outl("if(x==true)\ns == ", s);
-                Scheduler::schedMinGranularity = 4;//(mword)s.c_str();
+              //  KOUT::outl("if(x==true)\ns == ", s);
+                Scheduler::schedMinGranularity = atoi(s.c_str());//4;//(mword)s.c_str();
               }
            }
           else
