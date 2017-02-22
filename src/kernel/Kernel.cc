@@ -75,18 +75,22 @@ void kosMain() {
               KOUT::out1(c);
               s += c;
           }
-        else if(!isdigit(c) && !s.empty())//  else if ((c < '0' || c > '9') && !s.empty()) //if the number exists and has been read
+          else if(!isdigit(c) && !s.empty())//  else if ((c < '0' || c > '9') && !s.empty()) //if the number exists and has been read
           {
                KOUT::out1(c);
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
+                  KOUT::outl("if(x==false)\ns == ", s);
                   Scheduler::defaultEpochLength = 20;//(mword)s.c_str();
                   s = "";
                   x = true;
               }
               else
+              {
+                KOUT::outl("if(x==true)\ns == ", s);
                 Scheduler::schedMinGranularity = 4;//(mword)s.c_str();
+              }
            }
           else
               KOUT::out1(c);
