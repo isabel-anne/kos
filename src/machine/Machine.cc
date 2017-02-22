@@ -46,7 +46,7 @@ extern void initCdiDrivers();
 extern bool findCdiDriver(const PCIDevice&);
 extern void lwip_init_tcpip();
 extern void kosMain();
-mword Machine::tps;
+mword Machine::tps = 0;
 
 // check various assumptions about data type sizes
 static_assert(sizeof(uint64_t) == sizeof(mword), "mword != uint64_t" );
@@ -88,7 +88,6 @@ static const unsigned int maxIDT = 256;
 static InterruptDescriptor idt[maxIDT]                __aligned(pagesize<1>());
 
 // CPU information
-mword Machine::tps = 0; //added for a2
 mword Machine::processorCount = 0;
 static Processor* processorTable = nullptr;
 static Scheduler* schedulerTable = nullptr;
