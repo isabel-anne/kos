@@ -63,6 +63,8 @@ void kosMain() {
 
   string s = "";
   bool x = false;
+  int tempEpoch;
+  int tempGran;
 
   iter = kernelFS.find("schedparam");
   if (iter == kernelFS.end()) {
@@ -83,13 +85,15 @@ void kosMain() {
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  target.setEpochLength(atoi(s.c_str()));
+                  target->setEpochLength(atoi(s.c_str()));
+                  tempEpoch = atoi(s.c_str());
                   s = "";
                   x = true;
               }
               else
               {
-                  taget.setMinGranularity(atoi(s.c_str()));
+                  target->setMinGranularity(atoi(s.c_str()));
+                  tempGran = atoi(s.c_str());
               }
            }
           else
@@ -97,12 +101,12 @@ void kosMain() {
       }
     }
     //convert sched params from milliseconds to ticks per cycle
-     Scheduler::epochLength *= (Machine::tps/1000.0);
-     Scheduler::schedMinGranularity *= Machine::tps/1000.0);
+     target->setEpochLength(tempEpoch*(Machine::gettps()/1000.0));
+     target->setMinGranularity(tempGran*(Machine::gettps()/1000.0));
      KOUT::out1("Schedule Parameters afte Parse\n");
      KOUT::out1("tps (ticks per second) = ", Machine::gettps(), "\n");
-     KOUT::out1("epochLength = ",  Scheduler::epochLength, "\n");
-     KOUT::out1("minGranularity = ",  Scheduler::minGranularity, "\n");
+     KOUT::out1("epochLength = ",  tempEpoch*(Machine::gettps()/1000.0), "\n");
+     KOUT::out1("minGranularity = ",  tempGran*(Machine::gettps()/1000.0), "\n");
 
 
      for(int i = 0; i < Machine::getProcessorCount(); i++)
