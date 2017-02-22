@@ -25,6 +25,7 @@
 #include <stdlib.h> //added for a2
 #include "runtime/Scheduler.h"
 #include <string>
+#include <ctype.h>
 
 #include "main/UserMain.h"
 
@@ -69,7 +70,7 @@ void kosMain() {
       for (;;) {
           char c;
           if (f.read(&c, 1) == 0) break;
-          if(c >= '0' && c <= '9') // 0-9 ASCII value
+          if(isdigit(c[0])//)if(c >= '0' && c <= '9') // 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
