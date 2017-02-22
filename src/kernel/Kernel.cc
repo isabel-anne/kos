@@ -72,7 +72,7 @@ void kosMain() {
           string sc = "";
           if (f.read(&c, 1) == 0) break;
           sc += c;
-          if(isdigit(sc[0]))//)if(c >= '0' && c <= '9') // 0-9 ASCII value
+          if(isdigit(c))//)if(c >= '0' && c <= '9') // 0-9 ASCII value
           {  //if it is a number add it to the end of string
               KOUT::out1(c);
               s += c;
