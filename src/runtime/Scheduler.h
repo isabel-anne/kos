@@ -48,8 +48,12 @@ class Scheduler {
   const Scheduler& operator=(const Scheduler&) = delete; // no assignment
 
 public:
-  static mword defaultEpochLength; //added for a2
-  static mword schedMinGranularity; //added for a2
+  //added for a2
+  mword epochLength;
+  mword minvRuntime;
+  static mword defaultEpochLength;
+  static mword schedMinGranularity;
+  //end added for a2
   Scheduler();
   void setPartner(Scheduler& s) { partner = &s; }
   static void resume(Thread& t);
