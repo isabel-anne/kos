@@ -58,7 +58,7 @@ Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(th
   //A2 Initialize the tree that contains the threads waiting to be served
   readyTree = new Tree<ThreadNode>();
   //Add a thread to the tree. anyThreadClassObject is an object of ThreadClass
-  readyTree->insert(*(new ThreadNode(*idleThread)));
+  readyTree->insert(*(new ThreadNode(idleThread)));
   //  readyQueue[idlePriority].push_back(*idleThread);
   readyCount += 1;
 
