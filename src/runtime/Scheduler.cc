@@ -19,6 +19,7 @@
 #include "runtime/Stack.h"
 #include "runtime/Thread.h"
 #include "kernel/Output.h"
+#include "generic/Tree.h" //added for a2
 
 //added for a2
 mword Scheduler::defaultEpochLength;
@@ -29,6 +30,13 @@ Scheduler::Scheduler() : readyCount(0), preemption(0), resumption(0), partner(th
   Thread* idleThread = Thread::create((vaddr)idleStack, minimumStack);
   idleThread->setAffinity(this)->setPriority(idlePriority);
   // use low-level routines, since runtime context might not exist
+
+//added for a2
+  Scheduler::schedMinGranularity = 0;
+  Scheduler::defaultEpochLength = 0;
+//  Scheduler::min
+
+
   idleThread->stackPointer = stackInit(idleThread->stackPointer, &Runtime::getDefaultMemoryContext(), (ptr_t)Runtime::idleLoop, this, nullptr, nullptr);
   readyQueue[idlePriority].push_back(*idleThread);
   readyCount += 1;
