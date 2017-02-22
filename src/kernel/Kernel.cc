@@ -59,7 +59,7 @@ void kosMain() {
   }
 
 //added for a2
-  Scheduler *targer = NULL;
+  Scheduler *target = NULL;
 
   string s = "";
   bool x = false;
