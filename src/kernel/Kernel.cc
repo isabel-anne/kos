@@ -81,13 +81,13 @@ void kosMain() {
               //if x == false parse to int and store defaultEpochLength
               //if x == true parse to int and store in schedMinGranularity
               if(x == false){
-                  epochLength = atoi(s.c_str());
+                  Scheduler::setEpochLength(atoi(s.c_str()));
                   s = "";
                   x = true;
               }
               else
               {
-                minGranularity = atoi(s.c_str());
+                Scheduler::setMinGranularity(atoi(s.c_str()));
               }
            }
           else
